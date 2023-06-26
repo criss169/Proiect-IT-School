@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/styles/shared.css" />
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel&family=Comfortaa&family=Karla&family=Labrada&family=Libre+Baskerville:wght@400;700&family=Lora:ital,wght@0,700;1,400&family=Montserrat&family=Oswald:wght@400;700&family=Parisienne&display=swap"
+      rel="stylesheet"
+    />
+    <title>Salad Information</title>
+    <head>
+      <style>
+        body {
+          margin: 0;
+          padding: 0;
+          background-color: #fff;
+        }
+
+        .container {
+          max-width: 800px;
+          margin: 0 auto;
+          padding: 20px;
+          background-color: #f2f2f2;
+        }
+
+        h1 {
+          text-align: center;
+          color: #333;
+          font-family: "Libre Baskerville", serif;
+        }
+        h2 {
+          font-family: "Libre Baskerville", serif;
+          padding: 5px;
+        }
+
+        p {
+          color: #666;
+          line-height: 1.5;
+          font-family: "Karla", sans-serif;
+        }
+
+        .highlight {
+          color: #ff7f50;
+          font-weight: bold;
+          font-family: "Karla", sans-serif;
+        }
+
+        .quote {
+          font-style: italic;
+          text-align: center;
+          margin: 20px 0;
+          color: #777;
+          font-family: "Karla", sans-serif;
+        }
+
+        li {
+          font-family: "Karla", sans-serif;
+        }
+        .image {
+          text-align: center;
+          margin: 20px 0;
+        }
+
+        .container img {
+          display: block;
+          max-width: 70%;
+          height: auto;
+          margin-left: auto;
+          margin-right: auto;
+          padding: 20px;
+        }
+
+        /* Responsive Styles */
+        @media screen and (max-width: 600px) {
+          .container {
+            padding: 10px;
+          }
+
+          h1 {
+            font-size: 24px;
+          }
+
+          .quote {
+            font-size: 16px;
+          }
+        }
+      </style>
+    </head>
+  </head>
+  <header>
+    <div class="container-principal">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid p-0">
+          <a class="navbar-brand" href="/project-react/assets/index.html">
+            <img src="/logo.jpg" alt="Logo" width="120px" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link m-lg-4 p-0"
+                  href="/pages//main page/breakfast.html"
+                  >Breakfast</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link m-lg-4 p-0"
+                  href="/pages//main page/appetizers.html"
+                  >Appetizers</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link m-lg-4 p-0"
+                  href="/pages//main page/dinner.html"
+                  >Dinner</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link m-lg-4 p-0"
+                  href="/pages//main page/dessert.html"
+                  >Dessert</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle m-lg-4 p-0"
+                  href="/project-react/assets/pages/main page/magicbox.html"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Magic box
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="/pages/main page/sauces.html"
+                      >Sauces</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/pages//main page/soups.html"
+                      >Soups</a
+                    >
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="/pages//main page/plan-de-mese.html"
+                      >Meal plan</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <div class="style-form">
+              <form class="d-flex" role="search">
+                <input
+                  class="form-control me-3"
+                  type="search"
+                  placeholder="Something delicious..."
+                  aria-label="Search"
+                />
+                <button class="btn btn-outline-dark me-5" type="submit">
+                  Search
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <body>
+    <div class="container">
+      <h1>Salad: Nature's Refreshing Delight</h1>
+      <div class="quote">
+        "The salad refreshes without weakening and fortifies without
+        irritating."
+      </div>
+      <div class="image-container">
+        <img
+          src="/images/Sectiunea 1, pagina princip/salad.jpg"
+          alt="Salad Image"
+        />
+      </div>
+      <div class="salad-info">
+        <h2>Salad History</h2>
+        <p>
+          Salads have been consumed for centuries and have roots in ancient
+          civilizations. The ancient Greeks and Romans were known to enjoy mixed
+          greens with dressing. In fact, the word "salad" is derived from the
+          Latin word "salata," which means salted. In ancient times, salads were
+          often dressed with salt and oil.
+        </p>
+        <p>
+          During the Renaissance period, salads became more elaborate with the
+          addition of various herbs, vegetables, and fruits. The popularity of
+          salads grew further during the 17th and 18th centuries in Europe,
+          where they were served as appetizers or as palate cleansers between
+          courses during elaborate meals.
+        </p>
+        <p>
+          In the 20th century, salads gained prominence as health-conscious
+          individuals sought lighter and nutrient-packed meals. The advent of
+          refrigeration and transportation advancements allowed for a wider
+          variety of fresh ingredients to be available year-round, making salads
+          even more popular.
+        </p>
+
+        <h2>When to Enjoy a Salad</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut auctor
+          dapibus sem eget eleifend. In hac habitasse platea dictumst. Aliquam
+          bibendum nibh in malesuada fermentum.
+        </p>
+
+        <h2>Types of Salad</h2>
+        <ul>
+          <li>
+            <span class="highlight">Green Salad:</span> Fresh lettuce, spinach,
+            and other leafy greens with various toppings.
+          </li>
+          <li>
+            <span class="highlight">Caesar Salad:</span> Romaine lettuce,
+            croutons, Parmesan cheese, and Caesar dressing.
+          </li>
+          <li>
+            <span class="highlight">Fruit Salad:</span> Assorted fruits mixed
+            with a light dressing or served fresh.
+          </li>
+        </ul>
+
+        <h2>Popular Salad Choices</h2>
+        <ul>
+          <li>
+            <span class="highlight">Greek Salad:</span> Cucumbers, tomatoes, red
+            onions, feta cheese, olives, and Greek dressing.
+          </li>
+          <li>
+            <span class="highlight">Cobb Salad:</span> Chopped lettuce,
+            tomatoes, bacon, hard-boiled eggs, avocado, chicken, and blue cheese
+            dressing.
+          </li>
+          <li>
+            <span class="highlight">Caprese Salad:</span> Sliced tomatoes, fresh
+            mozzarella cheese, basil leaves, and balsamic glaze.
+          </li>
+          <li>
+            <span class="highlight">Nicoise Salad:</span> Green beans, boiled
+            potatoes, hard-boiled eggs, cherry tomatoes, olives, and seared
+            tuna, served with a lemon vinaigrette.
+          </li>
+        </ul>
+
+        <h2>Salad Pairings</h2>
+        <ul>
+          <li>
+            <span class="highlight">Grilled Chicken:</span> Adds protein and a
+            savory flavor to complement the freshness of the salad.
+          </li>
+          <li>
+            <span class="highlight">Citrus Vinaigrette:</span> A tangy dressing
+            that enhances the flavors of the salad ingredients.
+          </li>
+          <li>
+            <span class="highlight">Crusty Bread:</span> Perfect for mopping up
+            the delicious dressings and juices.
+          </li>
+          <li>
+            <span class="highlight">Salmon Fillet:</span> A grilled or roasted
+            salmon fillet provides a rich and flavorful addition to a salad.
+          </li>
+        </ul>
+      </div>
+    </div>
+    <footer id="site-footer">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-sm">
+            <p class="footer-copyright">
+              Tot conținutul este generat de către Savori în bucătărie. Toate
+              drepturile rezervate.
+            </p>
+            <p class="footer-copyright">Creat de Cristina Aftode © 2023.</p>
+          </div>
+          <div class="footer-icons">
+            <div class="icon-instagram">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+                width="30"
+              >
+                <path
+                  d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                />
+              </svg>
+            </div>
+            <div class="icon-tiktok">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+                width="20"
+                class="icon-tiktok"
+              >
+                <path
+                  d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+      integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+      integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

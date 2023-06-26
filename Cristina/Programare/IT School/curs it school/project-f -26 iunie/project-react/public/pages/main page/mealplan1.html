@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/styles/shared.css" />
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel&family=Comfortaa&family=Karla&family=Labrada&family=Libre+Baskerville:wght@400;700&family=Lora:ital,wght@0,700;1,400&family=Montserrat&family=Oswald:wght@400;700&family=Parisienne&display=swap"
+      rel="stylesheet"
+    />
+    <title>WEEKLY MENU PLAN 1</title>
+  </head>
+  <style>
+    .main-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      font-family: "Karla", sans-serif;
+    }
+
+    .container-recipes {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 10px;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      padding: 20px;
+      text-align: center;
+      color: #333;
+      font-family: "Libre Baskerville", serif;
+    }
+    .entry-category {
+      color: #999;
+      margin-bottom: 5px;
+      font-family: "Libre Baskerville", serif;
+      font-size: 12px;
+    }
+
+    h2 {
+      color: #ff4081;
+      font-size: 24px;
+      margin-bottom: 10px;
+      font-family: "Libre Baskerville", serif;
+    }
+
+    p {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .recipe p,
+    li {
+      font-family: "Karla", sans-serif;
+    }
+
+    .summary ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+
+    .summary li {
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+
+    .main-container img {
+      object-fit: cover;
+      width: 50%;
+      padding: 10px;
+    }
+  </style>
+  <header>
+    <div class="container-principal">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid p-0">
+          <a class="navbar-brand" href="/project-react/assets/index.html">
+            <img src="/logo.jpg" alt="Logo" width="120px" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link m-lg-4 p-0"
+                  href="/pages//main page/breakfast.html"
+                  >Breakfast</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link m-lg-4 p-0"
+                  href="/pages//main page/appetizers.html"
+                  >Appetizers</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link m-lg-4 p-0"
+                  href="/pages//main page/dinner.html"
+                  >Dinner</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link m-lg-4 p-0"
+                  href="/pages//main page/dessert.html"
+                  >Dessert</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle m-lg-4 p-0"
+                  href="/project-react/assets/pages/main page/magicbox.html"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Magic box
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="/pages/main page/sauces.html"
+                      >Sauces</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/pages//main page/soups.html"
+                      >Soups</a
+                    >
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="/pages//main page/plan-de-mese.html"
+                      >Meal plan</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <div class="style-form">
+              <form class="d-flex" role="search">
+                <input
+                  class="form-control me-3"
+                  type="search"
+                  placeholder="Something delicious..."
+                  aria-label="Search"
+                />
+                <button class="btn btn-outline-dark me-5" type="submit">
+                  Search
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <body>
+    <div class="main-container">
+      <h1>WEEKLY MENU PLAN 1</h1>
+      <p>
+        The first weekly menu plan is here! Full of flavorful, delectable dinner
+        recipes that are light and filling, plus a Saturday breakfast. The food
+        plan is expanded to include dessert as a delicious treat!
+      </p>
+      <div class="meal-plan-image"></div>
+      <h2>Weekly Menu Plan 1</h2>
+      <p>
+        You may print the grocery list, go grocery shopping, and prepare every
+        meal on this menu plan. That's how easy it is! With these well-liked
+        favorite recipes of mine, you can't go wrong. They are first because
+        they deserve to be! This week, you can expect to experience dishes that
+        are warming, savory, and flavorful.
+      </p>
+      <p>
+        Family dinners should be shared, and that is what I want to help you
+        achieve. Meals that are quick and simple without the trouble of
+        selecting recipes and then creating your own grocery list. Use this
+        printable grocery list and weekly food plan for a simple, stress-free
+        week. Here is a useful menu plan for you!
+      </p>
+      <div class="container-recipes">
+        <div class="recipe">
+          <h2>1. Chicken curry with rice and fresh cucumbers</h2>
+          <p class="entry-category">Monday Dinner</p>
+          <img
+            src="/images/Navbar/Meal plans/Meal Plan 1/monday.jpeg"
+            alt="Meal Plan 1"
+          />
+          <p>
+            Chicken curry with rice and fresh cucumbers is a flavorful and
+            aromatic dish that combines tender chicken pieces cooked in a rich
+            and creamy curry sauce, served alongside fluffy rice and refreshing
+            cucumber slices. This recipe brings together the warm and comforting
+            flavors of curry spices with the cool crunch of cucumbers, creating
+            a delightful balance of textures and tastes.
+          </p>
+          <h2>Ingredients:</h2>
+          <ul>
+            <li>
+              1 lb (450g) boneless, skinless chicken breasts, cut into
+              bite-sized pieces
+            </li>
+            <li>1 tablespoon vegetable oil</li>
+            <li>1 medium onion, finely chopped</li>
+            <li>2 cloves of garlic, minced</li>
+            <li>1 tablespoon curry powder</li>
+            <li>1 teaspoon ground cumin</li>
+            <li>1 teaspoon ground coriander</li>
+            <li>1/2 teaspoon turmeric powder</li>
+            <li>
+              1/4 teaspoon cayenne pepper (adjust according to your spice
+              preference)
+            </li>
+            <li>1 can (14 oz) coconut milk</li>
+            <li>1 cup chicken broth</li>
+            <li>Salt, to taste</li>
+            <li>Freshly ground black pepper, to taste</li>
+            <li>Cooked rice, for serving</li>
+            <li>Fresh cucumbers, sliced, for serving</li>
+          </ul>
+
+          <h2>Instructions:</h2>
+          <ol>
+            <li>
+              Heat the vegetable oil in a large pan or skillet over medium heat.
+              Add the chopped onion and minced garlic, and sauté until the onion
+              becomes translucent and fragrant.
+            </li>
+            <li>
+              Add the chicken pieces to the pan and cook until they are lightly
+              browned on all sides. Make sure the chicken is cooked through and
+              no longer pink in the center.
+            </li>
+            <li>
+              In a small bowl, combine the curry powder, ground cumin, ground
+              coriander, turmeric powder, and cayenne pepper. Stir the spice
+              mixture into the pan with the chicken and onions, coating the
+              chicken evenly.
+            </li>
+            <li>
+              Pour in the coconut milk and chicken broth. Stir well to combine
+              all the ingredients. Bring the mixture to a simmer and let it cook
+              for about 15-20 minutes, or until the sauce has thickened slightly
+              and the flavors have melded together.
+            </li>
+            <li>
+              Taste the curry and season with salt and freshly ground black
+              pepper according to your preference.
+            </li>
+            <li>
+              While the curry is simmering, cook the rice according to the
+              package instructions.
+            </li>
+            <li>
+              Serve the chicken curry over the cooked rice. Garnish with fresh
+              cucumber slices on the side.
+            </li>
+          </ol>
+        </div>
+        <div class="recipe">
+          <h2>2. Incredible Homemade Calzone</h2>
+          <p class="entry-category">Tuesday Dinner</p>
+          <img
+            src="/images/Navbar/Meal plans/Meal Plan 1/tuesday.jpg"
+            alt="Meal Plan 1"
+          />
+          <p>
+            This recipe teaches you how to make mouthwatering calzones right in
+            your own kitchen. The calzones are filled with your favorite
+            ingredients, such as cooked sausage, pepperoni, vegetables, and
+            gooey melted mozzarella cheese. The homemade dough is soft, pillowy,
+            and perfectly baked to golden perfection. Each bite is a delightful
+            combination of flavors and textures, making it a satisfying and
+            comforting meal that the whole family will enjoy.
+          </p>
+          <h2>Ingredients:</h2>
+          <ul>
+            <li>1 1/2 cups warm water</li>
+            <li>2 1/4 teaspoons active dry yeast</li>
+            <li>1 tablespoon sugar</li>
+            <li>1 tablespoon olive oil</li>
+            <li>4 cups all-purpose flour</li>
+            <li>2 teaspoons salt</li>
+            <li>1 cup pizza sauce</li>
+            <li>2 cups shredded mozzarella cheese</li>
+            <li>
+              Your favorite calzone fillings (e.g., cooked sausage, pepperoni,
+              vegetables)
+            </li>
+          </ul>
+          <h2>Instructions:</h2>
+          <ol>
+            <li>
+              In a large bowl, combine warm water, yeast, and sugar. Let it sit
+              for about 5 minutes until the mixture becomes frothy.
+            </li>
+            <li>
+              Add olive oil, flour, and salt to the yeast mixture. Stir until
+              the dough comes together.
+            </li>
+            <li>
+              Knead the dough on a lightly floured surface for about 5 minutes
+              until smooth and elastic.
+            </li>
+            <li>
+              Place the dough in a greased bowl, cover with a clean cloth, and
+              let it rise in a warm place for about 1 hour or until doubled in
+              size.
+            </li>
+            <li>
+              Preheat the oven to 475°F (245°C). Punch down the dough and divide
+              it into desired portions.
+            </li>
+            <li>
+              On a floured surface, roll out each portion into a circle. Spread
+              pizza sauce on one half of each circle.
+            </li>
+            <li>
+              Add desired fillings and sprinkle shredded mozzarella cheese on
+              top.
+            </li>
+            <li>
+              Fold the other half of the dough over the filling and pinch the
+              edges to seal. Cut small slits on the top to allow steam to
+              escape.
+            </li>
+            <li>
+              Transfer the calzones onto a baking sheet and bake for 12-15
+              minutes, or until golden brown.
+            </li>
+            <li>
+              Remove from the oven and let them cool slightly before serving.
+            </li>
+          </ol>
+        </div>
+        <div class="recipe">
+          <h2>3. Shrimp and Vegetable Skillet</h2>
+          <p class="entry-category">Wednesday Dinner</p>
+          <img
+            src="/images/Navbar/Meal plans/Meal Plan 1/wednesday.jpg"
+            alt="Meal Plan 1"
+          />
+          <p>
+            This delicious skillet dish is packed with a medley of flavors.
+            Succulent shrimp are cooked to perfection and combined with a
+            colorful array of diced onions, bell peppers, garlic, zucchini, and
+            yellow squash.
+          </p>
+          <h2>Ingredients:</h2>
+          <ul>
+            <li>1 tablespoon olive oil</li>
+            <li>1/2 pound shrimp, peeled and deveined</li>
+            <li>1 onion, diced</li>
+            <li>2 bell peppers, diced</li>
+            <li>2 cloves garlic, minced</li>
+            <li>1 zucchini, diced</li>
+            <li>1 yellow squash, diced</li>
+            <li>1 teaspoon paprika</li>
+            <li>1/2 teaspoon dried thyme</li>
+            <li>Salt and pepper to taste</li>
+            <li>Fresh parsley, chopped (for garnish)</li>
+          </ul>
+          <h2>Instructions:</h2>
+          <ol>
+            <li>In a large skillet, heat olive oil over medium-high heat.</li>
+            <li>Add shrimp. Cook until shrimp is pink and cooked through.</li>
+            <li>Remove shrimp from the skillet and set aside.</li>
+            <li>
+              In the same skillet, add onion, bell peppers, and garlic. Sauté
+              until vegetables are tender.
+            </li>
+            <li>
+              Add zucchini, yellow squash, paprika, dried thyme, salt, and
+              pepper. Cook for a few more minutes.
+            </li>
+            <li>Return the shrimp to the skillet. Stir to combine.</li>
+            <li>Garnish with fresh parsley before serving.</li>
+          </ol>
+        </div>
+        <div class="recipe">
+          <h2>
+            4. Strawberry Avocado Spinach Salad with Creamy Poppyseed Dressing
+          </h2>
+          <p class="entry-category">Thursday Dinner</p>
+          <img
+            src="/images/Navbar/Meal plans/Meal Plan 1/thursday.jpg"
+            alt="Meal Plan 1"
+          />
+          <p>
+            This refreshing salad is a perfect balance of flavors and textures.
+            Fresh baby spinach leaves serve as the base, complemented by slices
+            of juicy strawberries, creamy avocado, and tangy red onion. The
+            salad is topped with crumbled feta cheese and sliced almonds for
+            added crunch.It's a vibrant and satisfying salad that is perfect for
+            a light lunch or as a side dish for any meal.
+          </p>
+          <h2>Ingredients:</h2>
+          <ul>
+            <li>6 cups baby spinach</li>
+            <li>1 pint strawberries, hulled and sliced</li>
+            <li>1 avocado, sliced</li>
+            <li>1/4 cup sliced red onion</li>
+            <li>1/4 cup crumbled feta cheese</li>
+            <li>1/4 cup sliced almonds</li>
+            <li>1/4 cup mayonnaise</li>
+            <li>2 tablespoons Greek yogurt</li>
+            <li>1 tablespoon honey</li>
+            <li>1 tablespoon apple cider vinegar</li>
+            <li>1 teaspoon poppy seeds</li>
+            <li>Salt and pepper to taste</li>
+          </ul>
+          <h2>Instructions:</h2>
+          <ol>
+            <li>
+              In a large salad bowl, combine baby spinach, strawberries,
+              avocado, red onion, feta cheese, and sliced almonds.
+            </li>
+            <li>
+              In a small bowl, whisk together mayonnaise, Greek yogurt, honey,
+              apple cider vinegar, poppy seeds, salt, and pepper to make the
+              dressing.
+            </li>
+            <li>Pour the dressing over the salad and toss gently to coat.</li>
+            <li>Serve immediately and enjoy!</li>
+          </ol>
+        </div>
+        <div class="recipe">
+          <h2>5. Sausage, Spinach Egg Breakfast Taquitos</h2>
+          <p class="entry-category">Saturday Breakfast</p>
+          <img
+            src="/images/Navbar/Meal plans/Meal Plan 1/saturday.jpg"
+            alt="Meal Plan 1"
+          />
+          <p>
+            These breakfast taquitos are a delicious way to start your day. They
+            feature a flavorful combination of scrambled eggs, cooked breakfast
+            sausage, fresh baby spinach, and shredded cheddar cheese, all
+            wrapped in a warm flour tortilla.
+          </p>
+          <h2>Ingredients:</h2>
+          <ul>
+            <li>8 small flour tortillas</li>
+            <li>8 eggs, beaten</li>
+            <li>1/2 pound ground breakfast sausage, cooked and drained</li>
+            <li>2 cups fresh baby spinach</li>
+            <li>1 cup shredded cheddar cheese</li>
+            <li>1/2 teaspoon garlic powder</li>
+            <li>1/2 teaspoon onion powder</li>
+            <li>Salt and pepper to taste</li>
+            <li>Vegetable oil, for frying</li>
+          </ul>
+          <h2>Instructions:</h2>
+          <ol>
+            <li>
+              In a large skillet, scramble the eggs over medium heat until
+              cooked through. Remove from heat.
+            </li>
+            <li>
+              In a large bowl, combine the scrambled eggs, cooked sausage, baby
+              spinach, shredded cheddar cheese, garlic powder, onion powder,
+              salt, and pepper.
+            </li>
+            <li>
+              Place a spoonful of the egg mixture onto each flour tortilla. Roll
+              tightly into a taquito shape.
+            </li>
+            <li>
+              In a separate skillet, heat vegetable oil over medium-high heat.
+              Fry the taquitos until golden brown and crispy.
+            </li>
+            <li>
+              Remove from heat and let them drain on a paper towel-lined plate.
+            </li>
+            <li>Serve hot and enjoy!</li>
+          </ol>
+        </div>
+        <div class="recipe">
+          <h2>6. Easy London Broil</h2>
+          <p class="entry-category">Sunday Dinner</p>
+          <img
+            src="/images/Navbar/Meal plans/Meal Plan 1/sunday.jpg"
+            alt="Meal Plan 1"
+          />
+          <p>
+            This recipe takes the classic London broil steak and makes it
+            incredibly easy to prepare. The steak is marinated in a flavorful
+            mixture of olive oil, soy sauce, minced garlic, dried rosemary,
+            dried thyme, black pepper, and salt, resulting in a tender and
+            well-seasoned meat. It's a simple yet impressive dish that is
+            perfect for any occasion, whether it's a casual family dinner or a
+            special gathering.
+          </p>
+          <h2>Ingredients:</h2>
+          <ul>
+            <li>1 1/2 pounds London broil steak</li>
+            <li>2 tablespoons olive oil</li>
+            <li>2 tablespoons soy sauce</li>
+            <li>2 cloves garlic, minced</li>
+            <li>1 teaspoon dried rosemary</li>
+            <li>1 teaspoon dried thyme</li>
+            <li>1/2 teaspoon black pepper</li>
+            <li>1/2 teaspoon salt</li>
+          </ul>
+          <h2>Instructions:</h2>
+          <ol>
+            <li>
+              In a small bowl, whisk together olive oil, soy sauce, minced
+              garlic, dried rosemary, dried thyme, black pepper, and salt.
+            </li>
+            <li>
+              Place the London broil steak in a shallow dish and pour the
+              marinade over it. Turn the steak to coat both sides.
+            </li>
+            <li>
+              Cover the dish and let the steak marinate in the refrigerator for
+              at least 2 hours, or overnight for best results.
+            </li>
+            <li>Preheat the grill or broiler to medium-high heat.</li>
+            <li>
+              Remove the steak from the marinade and discard the excess
+              marinade.
+            </li>
+            <li>
+              Grill or broil the steak for about 5-6 minutes per side, or until
+              it reaches your desired level of doneness.
+            </li>
+            <li>
+              Transfer the steak to a cutting board and let it rest for a few
+              minutes.
+            </li>
+            <li>Slice the steak against the grain into thin strips.</li>
+            <li>Serve hot and enjoy!</li>
+          </ol>
+        </div>
+        <div class="recipe">
+          <h2>7. Cinnabon Cinnamon Roll Cake</h2>
+          <p class="entry-category">Dessert</p>
+          <img
+            src="/images/Navbar/Meal plans/Meal Plan 1/dessert.jpg"
+            alt="Meal Plan 1"
+          />
+          <p>
+            Indulge your sweet tooth with this delectable cinnamon roll cake
+            inspired by the beloved Cinnabon treats. This cake is a delightful
+            twist on the classic cinnamon rolls, featuring a tender and moist
+            cake base infused with a heavenly cinnamon-sugar swirl.
+          </p>
+          <h2>Ingredients:</h2>
+          <li>2 cups all-purpose flour</li>
+          <li>1 cup granulated sugar</li>
+          <li>2 teaspoons baking powder</li>
+          <li>1/2 teaspoon salt</li>
+          <li>1 cup milk</li>
+          <li>1/4 cup unsalted butter, melted</li>
+          <li>1 teaspoon vanilla extract</li>
+          <li>2 large eggs</li>
+          <li>2 tablespoons unsalted butter, softened</li>
+          <li>1 cup brown sugar</li>
+          <li>2 tablespoons ground cinnamon</li>
+          <li>2 cups powdered sugar</li>
+          <li>1/4 cup milk</li>
+          <li>1 teaspoon vanilla extract</li>
+          <h2>Instructions:</h2>
+          <ol>
+            <li>
+              Preheat the oven to 350°F (175°C). Grease a 9x13-inch baking pan.
+            </li>
+            <li>
+              In a large bowl, whisk together flour, granulated sugar, baking
+              powder, and salt.
+            </li>
+            <li>
+              Add milk, melted butter, vanilla extract, and eggs to the dry
+              ingredients. Stir until well combined.
+            </li>
+            <li>
+              Pour the batter into the prepared baking pan and spread it evenly.
+            </li>
+            <li>
+              In a small bowl, mix softened butter, brown sugar, and cinnamon to
+              make the filling. Drop spoonfuls of the filling onto the batter.
+            </li>
+            <li>Use a knife to swirl the filling into the batter.</li>
+            <li>
+              Bake for 25-30 minutes, or until a toothpick inserted into the
+              center comes out clean.
+            </li>
+            <li>
+              While the cake is baking, prepare the glaze by whisking powdered
+              sugar, milk, and vanilla extract together in a small bowl.
+            </li>
+            <li>
+              Once the cake is done, remove it from the oven and let it cool for
+              a few minutes.
+            </li>
+            <li>Drizzle the glaze over the warm cake.</li>
+            <li>Slice and serve. Enjoy!</li>
+          </ol>
+        </div>
+        <div class="summary">
+          <h2>Summary</h2>
+          <ul>
+            <li>Monday Dinner: Chicken curry with rice and fresh cucumbers</li>
+            <li>Tuesday Dinner: Incredible Homemade Calzone</li>
+            <li>Wednesday Dinner: Shrimp and Sausage Vegetable Skillet</li>
+            <li>
+              Thursday Dinner: Strawberry Avocado Spinach Salad with Creamy
+              Poppyseed Dressing
+            </li>
+            <li>Saturday Breakfast: Sausage, Spinach Egg Breakfast Taquitos</li>
+            <li>Sunday Dinner: Easy London Broil</li>
+            <li>Dessert: Cinnabon Cinnamon Roll Cake</li>
+          </ul>
+        </div>
+        <p>
+          This week the weekly menu plan is focused on my popular recipes. Shop
+          at home with a few of my favorite meal plans that our family loves.
+          These meals are rich in flavor and all ages love! See what recipes you
+          will enjoy this next week with this delicious and simple pantry item
+          meal list.
+        </p>
+      </div>
+    </div>
+    <footer id="site-footer">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-sm">
+            <p class="footer-copyright">
+              Tot conținutul este generat de către Savori în bucătărie. Toate
+              drepturile rezervate.
+            </p>
+            <p class="footer-copyright">Creat de Cristina Aftode © 2023.</p>
+          </div>
+          <div class="footer-icons">
+            <div class="icon-instagram">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+                width="30"
+              >
+                <path
+                  d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                />
+              </svg>
+            </div>
+            <div class="icon-tiktok">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+                width="20"
+                class="icon-tiktok"
+              >
+                <path
+                  d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+      integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+      integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

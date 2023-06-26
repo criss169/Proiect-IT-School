@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/styles/shared.css" />
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel&family=Comfortaa&family=Karla&family=Labrada&family=Libre+Baskerville:wght@400;700&family=Lora:ital,wght@0,700;1,400&family=Montserrat&family=Oswald:wght@400;700&family=Parisienne&display=swap"
+      rel="stylesheet"
+    />
+    <title>Guide to Traditional Romanian Food</title>
+    <style>
+      main {
+        background-color: #f2f2f2;
+      }
+      header {
+        background-color: #fff;
+      }
+      h1 {
+        text-align: center;
+        font-family: "Libre Baskerville", serif;
+        padding: 40px;
+        font-size: 25px;
+        color: #333;
+        text-transform: uppercase;
+      }
+
+      .food-card {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+      }
+
+      .food-card h2 {
+        margin-top: 0;
+        font-family: "Libre Baskerville", serif;
+        font-size: 20px;
+        color: #333;
+        text-transform: uppercase;
+      }
+      .food-cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      .food-card p {
+        margin-bottom: 10px;
+        font-size: 16px;
+        color: rgb(32, 29, 29);
+        line-height: 1.5;
+        font-family: "Karla", sans-serif;
+      }
+
+      .food-card img {
+        max-width: 60%;
+        height: auto;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        padding: 10px;
+      }
+      #review {
+        padding: 50px;
+      }
+
+      .container-review {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      #review h1 {
+        text-align: center;
+        padding: 30px;
+        font-size: 30px;
+      }
+      .form-group {
+        margin-bottom: 20px;
+      }
+      label {
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: #555;
+      }
+
+      .stars {
+        list-style: none;
+        padding: 0;
+      }
+      .stars label {
+        font-size: 25px;
+        cursor: pointer;
+        color: #bbb;
+        transition: color 0.3s ease;
+      }
+      .stars input[type="radio"] {
+        display: none;
+      }
+
+      button[type="submit"] {
+        padding: 10px 20px;
+        background-color: #ff80ab;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      button[type="submit"]:hover {
+        background-color: #ff4081;
+      }
+
+      input[type="text"],
+      textarea {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+        color: #333;
+      }
+
+      .stars label:hover,
+      .stars label:hover ~ label,
+      .stars input[type="radio"]:checked ~ label {
+        color: #ffca08;
+      }
+
+      #site-footer {
+        background-color: #ffffff;
+      }
+
+      @media (max-width: 600px) {
+        .food-card {
+          padding: 10px;
+        }
+      }
+    </style>
+  </head>
+  <header>
+    <div class="container-principal">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid p-0">
+          <a class="navbar-brand" href="/project-react/assets/index.html">
+            <img src="/logo.jpg" alt="Logo" width="120px" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link m-lg-4 p-0"
+                  href="/pages//main page/breakfast.html"
+                  >Breakfast</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link m-lg-4 p-0"
+                  href="/pages//main page/appetizers.html"
+                  >Appetizers</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link m-lg-4 p-0"
+                  href="/pages//main page/dinner.html"
+                  >Dinner</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link m-lg-4 p-0"
+                  href="/pages//main page/dessert.html"
+                  >Dessert</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle m-lg-4 p-0"
+                  href="/project-react/assets/pages/main page/magicbox.html"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Magic box
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="/pages/main page/sauces.html"
+                      >Sauces</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/pages//main page/soups.html"
+                      >Soups</a
+                    >
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="/pages//main page/plan-de-mese.html"
+                      >Meal plan</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <div class="style-form">
+              <form class="d-flex" role="search">
+                <input
+                  class="form-control me-3"
+                  type="search"
+                  placeholder="Something delicious..."
+                  aria-label="Search"
+                />
+                <button class="btn btn-outline-dark me-5" type="submit">
+                  Search
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <body>
+    <main>
+      <h1>Guide to Traditional Romanian Food</h1>
+      <div class="food-cards">
+        <div class="food-card">
+          <h2>Mămăligă</h2>
+          <img
+            src="/images/Sectiunea 1, pagina princip/mamaliga.jpg"
+            alt="Mămăligă"
+          />
+          <p>
+            Mămăligă is a traditional Romanian dish made from cornmeal. It has a
+            porridge-like consistency and is usually served as a side dish with
+            sour cream and grated cheese. It is often enjoyed alongside meat
+            dishes or used as a base for various toppings and sauces.
+          </p>
+          <p>
+            Mămăligă is a staple in Romanian cuisine and has a long history,
+            dating back to ancient times when corn was introduced to the region.
+            It is a versatile dish that can be served in different ways,
+            depending on the accompanying ingredients and flavors.
+          </p>
+          <p>
+            One popular variation is "bulz," where mămăligă is mixed with cheese
+            and grilled. Another variation is "tochitură," which is a hearty
+            dish made with mămăligă, pork, and a rich sauce.
+          </p>
+        </div>
+
+        <div class="food-card">
+          <h2>Sarmale</h2>
+          <img
+            src="/images/Sectiunea 1, pagina princip/sarmale.jpg"
+            alt="Sarmale"
+          />
+          <p>
+            Sarmale are cabbage rolls stuffed with a mixture of ground pork,
+            rice, and spices. They are cooked in a savory tomato sauce and are a
+            staple dish in Romanian cuisine, especially during festive
+            occasions.
+          </p>
+          <p>
+            Sarmale are often served hot and are accompanied by sour cream and
+            polenta. They are a beloved dish in Romania and represent the
+            country's culinary heritage. The preparation of sarmale is a labor
+            of love, often involving family gatherings and sharing of
+            traditional recipes.
+          </p>
+          <p>
+            Sarmale variations can include using vine leaves instead of cabbage
+            or adding different fillings such as beef, lamb, or vegetarian
+            options. Each region of Romania has its own unique take on this
+            classic dish.
+          </p>
+        </div>
+
+        <div class="food-card">
+          <h2>Mici</h2>
+          <img src="/images/Sectiunea 1, pagina princip/mici.jpg" alt="Mici" />
+          <p>
+            Mici are grilled ground meat rolls made from a mixture of beef,
+            lamb, and pork. They are seasoned with various spices such as
+            garlic, thyme, and coriander.
+          </p>
+          <p>
+            Mici are popular street food in Romania and are often served with
+            mustard, bread, and pickles. They are best enjoyed hot and are a
+            favorite among locals and visitors alike. Mici are often a
+            centerpiece at outdoor gatherings and are a symbol of Romanian
+            culinary culture.
+          </p>
+          <p>
+            While mici are commonly associated with grilling, they can also be
+            pan-fried or cooked in the oven. Each region has its own twist on
+            the recipe, adding their own blend of spices and flavors.
+          </p>
+        </div>
+
+        <div class="food-card">
+          <h2>Papanași</h2>
+          <img
+            src="/images/Sectiunea 1, pagina princip/papanasi.jpg"
+            alt="Papanași"
+          />
+          <p>
+            Papanași are fried doughnuts made with cottage cheese. They are
+            typically served with sour cream and fruit preserves, such as cherry
+            or raspberry.
+          </p>
+          <p>
+            Papanași are a beloved dessert in Romania and are known for their
+            soft and fluffy texture. They are often enjoyed as a sweet treat or
+            as a delightful ending to a hearty meal. Papanași are a popular
+            choice during holidays and special occasions, and they reflect the
+            country's love for indulgent and comforting desserts.
+          </p>
+          <p>
+            Traditionally, papanași are shaped into large dumplings and fried
+            until golden brown. The doughnut-like exterior gives way to a creamy
+            and tangy center. They are sometimes dusted with powdered sugar or
+            drizzled with honey for added sweetness.
+          </p>
+        </div>
+
+        <div class="food-card">
+          <h2>Cozonac</h2>
+          <img
+            src="/images/Sectiunea 1, pagina princip/cozonac.jpg"
+            alt="Cozonac"
+          />
+          <p>
+            Cozonac is a sweet bread that is a traditional treat in Romania,
+            especially during holidays and special occasions. It is made from a
+            rich dough that is filled with a mixture of walnuts, cocoa, sugar,
+            and sometimes raisins. The dough is carefully braided and baked
+            until golden brown.
+          </p>
+          <p>
+            Cozonac is known for its soft and fluffy texture and its delightful
+            combination of sweet flavors. It is often enjoyed with a cup of tea
+            or coffee and is a symbol of celebration and togetherness in
+            Romanian culture.
+          </p>
+          <p>
+            Cozonac variations can include using different fillings such as
+            poppy seeds, nuts, or chocolate. It is a labor-intensive pastry that
+            requires skill and patience in the preparation and shaping of the
+            dough.
+          </p>
+        </div>
+        <div class="food-card">
+          <h2>Zacusca</h2>
+          <img
+            src="/images/Sectiunea 1, pagina princip/zacusca.jpg"
+            alt="Zacusca"
+          />
+          <p>
+            Zacusca is a traditional Romanian vegetable spread made from roasted
+            eggplants, bell peppers, and tomatoes. It is a versatile dish that
+            can be enjoyed as a spread on bread or as a flavorful accompaniment
+            to various dishes.
+          </p>
+          <p>
+            The preparation of zacusca involves roasting the vegetables until
+            they are soft and charred, which gives the spread a smoky flavor.
+            The roasted vegetables are then peeled, chopped, and sautéed with
+            onions and garlic, along with a combination of spices such as
+            paprika, thyme, and bay leaves.
+          </p>
+          <p>
+            Zacusca is typically preserved in jars, allowing the flavors to
+            develop and intensify over time. It is a popular homemade preserve
+            that is made in large batches during the late summer and early
+            autumn, when the vegetables are at their peak ripeness.
+          </p>
+          <p>
+            In Romanian cuisine, zacusca is a beloved accompaniment to meals and
+            is often enjoyed during the winter months. It can be spread on fresh
+            bread or used as a filling for sandwiches. Zacusca can also be
+            served as a dip for crackers or vegetable sticks, adding a burst of
+            flavor to appetizers.
+          </p>
+          <p>
+            Every family has its own recipe for zacusca, with slight variations
+            in the combination of vegetables and spices used. It is a cherished
+            culinary tradition that is passed down through generations, with
+            each cook adding their own personal touch.
+          </p>
+        </div>
+        <div class="food-card">
+          <h2>Ciorbă de Perişoare</h2>
+          <img
+            src="/images/Sectiunea 1, pagina princip/Ciorba-de-perisoare.jpg"
+            alt="Ciorbă de Perişoare"
+          />
+          <p>
+            Ciorbă de Perişoare is a traditional Romanian soup made with
+            meatballs and sour broth. It is a comforting and flavorful dish that
+            is often enjoyed as a main course or as a starter in Romanian
+            cuisine.
+          </p>
+          <p>
+            To prepare Ciorbă de Perişoare, the meatballs are made from a
+            mixture of ground meat, usually a combination of beef and pork,
+            mixed with breadcrumbs, eggs, garlic, and spices such as parsley and
+            dill. The meatballs are then cooked in a sour broth made from
+            vegetables, sour cream, and lemon juice.
+          </p>
+          <p>
+            The sourness in the broth is achieved through the addition of
+            fermented wheat bran or fermented barley bran, known as "bors." This
+            gives the soup its distinct tangy flavor. The sourness can be
+            adjusted to personal preference by adding more or less bors.
+          </p>
+          <p>
+            Ciorbă de Perişoare is often served hot and garnished with fresh
+            herbs such as parsley or dill. It is commonly enjoyed with a dollop
+            of sour cream on top, which adds a creamy richness to the soup. The
+            soup is typically accompanied by freshly baked bread or traditional
+            Romanian cornmeal porridge known as "mămăligă."
+          </p>
+          <p>
+            Like many traditional Romanian dishes, each family has its own
+            recipe for Ciorbă de Perişoare, with variations in the choice of
+            meat, seasonings, and the level of sourness in the broth. It is a
+            beloved soup that brings warmth and comfort, particularly during
+            cold winter days.
+          </p>
+        </div>
+        <div class="food-card">
+          <h2>Romanian Stew</h2>
+          <img
+            src="/images/Sectiunea 1, pagina princip/elena-leya-_jyB1ndDFQE-unsplash.jpg"
+            alt="Romanian Stew"
+          />
+          <p>
+            Romanian stew, also known as "tocană," is a classic dish that
+            showcases the rich flavors and hearty ingredients of Romanian
+            cuisine. It is a slow-cooked dish made with tender pieces of meat,
+            vegetables, and aromatic spices.
+          </p>
+          <p>
+            The meat used in Romanian stew can vary, with popular choices
+            including beef, pork, or a combination of both. The meat is
+            typically cut into bite-sized cubes and browned to enhance its
+            flavor before being simmered in a flavorful broth.
+          </p>
+          <p>
+            Along with the meat, Romanian stew incorporates a medley of
+            vegetables such as onions, carrots, potatoes, bell peppers, and
+            tomatoes. These vegetables add depth and texture to the stew, and
+            their flavors meld together during the cooking process.
+          </p>
+          <p>
+            To enhance the taste of the stew, a variety of spices and herbs are
+            added, including paprika, thyme, bay leaves, and garlic. These
+            seasonings infuse the stew with a wonderful aroma and a distinctive
+            Romanian flavor profile.
+          </p>
+          <p>
+            The stew is traditionally cooked slowly over low heat, allowing the
+            flavors to develop and the meat to become tender. This slow cooking
+            process results in a comforting and flavorful dish that is perfect
+            for chilly days or when you're craving a hearty meal.
+          </p>
+          <p>
+            Romanian stew is often served with a side of crusty bread or
+            mămăligă, which helps soak up the flavorful sauce. It is a dish that
+            brings people together, and it is commonly enjoyed with family and
+            friends during gatherings and celebrations.
+          </p>
+        </div>
+      </div>
+      <section id="review">
+        <div class="container-review">
+          <h1>Review Section</h1>
+          <form id="reviewForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required /><br /><br />
+
+            <label for="comments">Comments:</label><br />
+            <textarea id="comments" required></textarea><br /><br />
+
+            <label for="rating">Rating:</label><br />
+            <div class="stars">
+              <input type="radio" id="star5" name="rating" value="5" required />
+              <label for="star5">&#9733;</label>
+              <input type="radio" id="star4" name="rating" value="4" />
+              <label for="star4">&#9733;</label>
+              <input type="radio" id="star3" name="rating" value="3" />
+              <label for="star3">&#9733;</label>
+              <input type="radio" id="star2" name="rating" value="2" />
+              <label for="star2">&#9733;</label>
+              <input type="radio" id="star1" name="rating" value="1" />
+              <label for="star1">&#9733;</label>
+            </div>
+            <br /><br />
+
+            <button type="submit">Post</button>
+          </form>
+
+          <div id="reviewPosts">
+            <!-- The submitted review posts will be displayed here -->
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="site-footer">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-sm">
+            <p class="footer-copyright">
+              Tot conținutul este generat de către Savori în bucătărie. Toate
+              drepturile rezervate.
+            </p>
+            <p class="footer-copyright">Creat de Cristina Aftode © 2023.</p>
+          </div>
+          <div class="footer-icons">
+            <div class="icon-instagram">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+                width="30"
+              >
+                <path
+                  d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                />
+              </svg>
+            </div>
+            <div class="icon-tiktok">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+                width="20"
+                class="icon-tiktok"
+              >
+                <path
+                  d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+      integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+      integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

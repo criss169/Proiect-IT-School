@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/styles/shared.css" />
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel&family=Comfortaa&family=Karla&family=Labrada&family=Libre+Baskerville:wght@400;700&family=Lora:ital,wght@0,700;1,400&family=Montserrat&family=Oswald:wght@400;700&family=Parisienne&display=swap"
+      rel="stylesheet"
+    />
+    <title>Savori în bucătărie</title>
+  </head>
+  <body>
+    <header>
+      <div class="container-principal">
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid p-0">
+            <a class="navbar-brand" href="/project-react/assets/index.html">
+              <img src="/logo.jpg" alt="Logo" width="120px" />
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto mb-lg-0">
+                <li class="nav-item">
+                  <a
+                    class="nav-link m-lg-4 p-0"
+                    href="/pages//main page/breakfast.html"
+                    >Mic dejun</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link m-lg-4 p-0"
+                    href="/pages//main page/appetizers.html"
+                    >Aperitive</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link m-lg-4 p-0"
+                    href="/pages//main page/dinner.html"
+                    >Cină</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link m-lg-4 p-0"
+                    href="/pages//main page/dessert.html"
+                    >Desert</a
+                  >
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle m-lg-4 p-0"
+                    href="/project-react/assets/pages/main page/magicbox.html"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Cutia magică
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="/pages/main page/sauces.html"
+                        >Sosuri</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="/pages//main page/soups.html"
+                        >Supe</a
+                      >
+                    </li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="/pages//main page/plan-de-mese.html"
+                        >Plan de mese</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="style-form">
+                <form class="d-flex" role="search">
+                  <input
+                    class="form-control me-3"
+                    type="search"
+                    placeholder="Ceva delicios.."
+                    aria-label="Search"
+                  />
+                  <button class="btn btn-outline-dark me-5" type="submit">
+                    Search
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section id="carousel-slider-hero">
+        <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#hero-carousel"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#hero-carousel"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#hero-carousel"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#hero-carousel"
+              data-bs-slide-to="3"
+              aria-label="Slide 3"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#hero-carousel"
+              data-bs-slide-to="4"
+              aria-label="Slide 3"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#hero-carousel"
+              data-bs-slide-to="5"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active c-item">
+              <img
+                class="d-block w-100 c-img"
+                src="/Slider/Romania2.jpg"
+                alt="Ghid mancare Romania"
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <a href="/pages/main page slider/romaniaguide.html"
+                  ><h1 class="title-slider">
+                    Ghidul țării mele de proveniență
+                  </h1></a
+                >
+                <a href="/pages/main page slider/romaniaguide.html"
+                  ><p class="subtitle-slider">
+                    Ghidul mâncării tradiționale din România
+                  </p></a
+                >
+              </div>
+            </div>
+            <div class="carousel-item c-item">
+              <img
+                class="d-block w-100 c-img"
+                src="/Slider/Oua in sos de rosii.jpg"
+                alt="Oua in sos de rosii"
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <a href=""
+                  ><h1 class="title-slider">
+                    Un mod inovativ de a face micul dejun
+                  </h1></a
+                >
+                <p class="subtitle-slider">Oua gătite în suc de roșii</p>
+              </div>
+            </div>
+            <div class="carousel-item c-item">
+              <img
+                class="d-block w-100 c-img"
+                src="/Slider/Legume.jpg"
+                alt="Legume"
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h1 class="title-slider">Importanța consumului de legume</h1>
+                <p class="subtitle-slider">
+                  Află ce beneficii îți aduc consumul regulat de legume !
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item c-item">
+              <img
+                class="d-block w-100 c-img"
+                src="/Slider/Avocado.jpg"
+                alt="Avocado"
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h1 class="title-slider">Avocado</h1>
+                <p class="subtitle-slider">
+                  Fructul minune cu proprietăți nutritive fantastice.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item c-item">
+              <img
+                class="d-block w-100 c-img"
+                src="/Slider/Clatite.jpg"
+                alt="Clatite"
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h1 class="title-slider">Clătite</h1>
+                <p class="subtitle-slider">
+                  Află secretul celor mai pufoase clătite.
+                </p>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#hero-carousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#hero-carousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
+      <section id="sectiunea2">
+        <div class="d-flex justify-content-around">
+          <div class="card1">
+            <img
+              src="/images/Sectiunea 1, pagina princip/aperitiv pag pag.jpeg"
+              class="card-img-top"
+              alt="Aperitiv"
+              width="230"
+              height="290"
+            />
+            <div class="card-body1">
+              <h2 class="card-text1">Aperitiv</h2>
+              <p class="card-info1">
+                "În timp ce vă mâncați aperitivul, nu vă faceți griji pentru
+                desert."
+              </p>
+              <a href="/pages/main page cards/cappertiv.html"
+                ><button class="card-btn">Descoperă</button></a
+              >
+            </div>
+          </div>
+          <div class="card1">
+            <img
+              src="/images/Sectiunea 1, pagina princip/mic dejun pag princ.jpg"
+              class="card-img-top"
+              alt="Mic dejun"
+              width="220"
+              height="290"
+            />
+            <div class="card-body1">
+              <h2 class="card-text1">Mic dejun</h2>
+              <p class="card-info1">
+                "Așteptați-vă la probleme și mâncați-le pe toate la micul
+                dejun."
+              </p>
+              <a href="/pages/main page cards/cbreakfast.html"
+                ><button class="card-btn">Descoperă</button></a
+              >
+            </div>
+          </div>
+          <div class="card1">
+            <img
+              src="/images/Sectiunea 1, pagina princip/cina pag prin.JPG"
+              class="card-img-top"
+              alt="Cina"
+              width="260"
+              height="290"
+            />
+            <div class="card-body1">
+              <h2 class="card-text1">Cina</h2>
+              <p class="card-info1">
+                "Cina este momentul în care magia se întâmplă în bucătărie."
+              </p>
+              <a href="/pages/main page cards/cdinner.html"
+                ><button class="card-btn">Descoperă</button></a
+              >
+            </div>
+          </div>
+          <div class="card1">
+            <img
+              src="/images/Sectiunea 1, pagina princip/salata pag princ.JPG"
+              class="card-img-top"
+              alt="Salata"
+              width="230"
+              height="290"
+            />
+            <div class="card-body1">
+              <h2 class="card-text1">Salata</h2>
+              <p class="card-info1">
+                "Salata împrospătează fără a slăbi și fortifică fără a irita”.
+              </p>
+              <a href="/pages/main page cards/csalad.html"
+                ><button class="card-btn">Descoperă</button></a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="food-cards">
+        <div class="food-cards-title">
+          <h6>Cele mai populare rețete</h6>
+        </div>
+        <div class="food-cards-container">
+          <div class="row g-3">
+            <div class="col m-0 p-0">
+              <div class="card">
+                <a href="/pages/main page recipes/sarmale.html"
+                  ><img
+                    src="/images/Sectiunea 4, pagina princip/F43D6CFF-99DE-45C7-BF41-47C86C481664_1_105_c.jpeg"
+                    class="card-img-top"
+                    alt="Sarmale"
+                    width="145"
+                    height="240"
+                /></a>
+
+                <div class="card-body">
+                  <h5 class="card-title">Sărmăluțe vită-porc</h5>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Pregatire : 30 min</li>
+                  <li class="list-group-item">Preparare: 3h 30 min</li>
+                  <li class="list-group-item">Total: 4h</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col m-0 p-0">
+              <div class="card">
+                <a href="/pages/main page recipes/carbonara.html"
+                  ><img
+                    src="/images/Sectiunea 4, pagina princip/Spaghete_carbonara.jpg"
+                    class="card-img-top"
+                    alt="Sarmale"
+                    width="145"
+                    height="240"
+                /></a>
+                <div class="card-body">
+                  <h5 class="card-title">Spaghete Carbonara</h5>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Pregatire : 10 min</li>
+                  <li class="list-group-item">Preparare: 30 min</li>
+                  <li class="list-group-item">Total: 45 min</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col m-0 p-0">
+              <div class="card">
+                <a href="/pages/main page recipes/potato-stew.html">
+                  <img
+                    src="/images/Sectiunea 4, pagina princip/elena-leya-_jyB1ndDFQE-unsplash.jpg"
+                    class="card-img-top"
+                    alt="Sarmale"
+                    width="145"
+                    height="240"
+                /></a>
+                <div class="card-body">
+                  <h5 class="card-title">Tocană de cartofi</h5>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Pregatire : 20 min</li>
+                  <li class="list-group-item">Preparare: 1h</li>
+                  <li class="list-group-item">Total: 1h 20 min</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col m-0 p-0">
+              <div class="card">
+                <a href="/pages/main page recipes/sweet-sour-chicken.html">
+                  <img
+                    src="/images/Sectiunea 4, pagina princip/Pui dulce-acrisor cu legume.jpeg"
+                    class="card-img-top"
+                    alt="Sarmale"
+                    width="145"
+                    height="240"
+                /></a>
+                <div class="card-body">
+                  <h5 class="card-title">Pui dulce-acrișor</h5>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Pregatire : 20 min</li>
+                  <li class="list-group-item">Preparare: 1h</li>
+                  <li class="list-group-item">Total: 1h 20 min</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <br />
+          <br />
+          <div class="row g-3">
+            <div class="col m-0 p-0">
+              <div class="card">
+                <a href="/pages/main page recipes/tart-cherries.html"
+                  ><img
+                    src="/images/Sectiunea 4, pagina princip/alexander-mils-aiIANaSK9DQ-unsplash.jpg"
+                    class="card-img-top"
+                    alt="Sarmale"
+                    width="145"
+                    height="240"
+                /></a>
+                <div class="card-body">
+                  <h5 class="card-title">Tartă cu vișine</h5>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Pregatire : 30 min</li>
+                  <li class="list-group-item">Preparare: 1h 30 min</li>
+                  <li class="list-group-item">Total: 2h</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col m-0 p-0">
+              <div class="card">
+                <a href="/pages/main page recipes/stuffed croissants.html"
+                  ><img
+                    src="/images/Sectiunea 4, pagina princip/C08AC6E5-ECEF-4B92-88B5-0BB01AB4F810_1_105_c.jpeg"
+                    class="card-img-top"
+                    alt="Sarmale"
+                    width="145"
+                    height="240"
+                /></a>
+                <div class="card-body">
+                  <h5 class="card-title">Cornulețe umplute</h5>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Pregatire : 30 min</li>
+                  <li class="list-group-item">Preparare: 1h 30 min</li>
+                  <li class="list-group-item">Total: 2 ore</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col m-0 p-0">
+              <div class="card">
+                <a href="/pages/main page recipes/pancakes.html"
+                  ><img
+                    src="/images/Sectiunea 4, pagina princip/Clatite.jpg"
+                    class="card-img-top"
+                    alt="Clatite"
+                    width="145"
+                    height="240"
+                /></a>
+                <div class="card-body">
+                  <h5 class="card-title">Clătite pufoase</h5>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Pregatire : 10 min</li>
+                  <li class="list-group-item">Preparare: 45 min</li>
+                  <li class="list-group-item">Total: 55 min</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col m-0 p-0">
+              <div class="card">
+                <a href="/pages/main page recipes/oreo cake.html"
+                  ><img
+                    src="/images/Sectiunea 4, pagina princip/venti-views-lY89x1mpdaE-unsplash.jpg"
+                    class="card-img-top"
+                    alt="Sarmale"
+                    width="145"
+                    height="240"
+                /></a>
+                <div class="card-body">
+                  <h5 class="card-title">Prăjitură cu Oreo</h5>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Pregatire : 15 min</li>
+                  <li class="list-group-item">Preparare:45 min</li>
+                  <li class="list-group-item">Total: 1h</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="carousel-slider">
+        <div id="carouselExampleIndicators" class="carousel slide d-flex">
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            >
+              Specific chinezesc <i class="bi bi-arrow-right"></i>
+            </button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            >
+              Slow Cooking <i class="bi bi-arrow-right"></i>
+            </button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            >
+              Pește <i class="bi bi-arrow-right"></i>
+            </button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="3"
+              aria-label="Slide 3"
+            >
+              Paste <i class="bi bi-arrow-right"></i>
+            </button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="4"
+              aria-label="Slide 4"
+            >
+              Nutritive <i class="bi bi-arrow-right"></i>
+            </button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="5"
+              aria-label="Slide 5"
+            >
+              Lipie <i class="bi bi-arrow-right"></i>
+            </button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="6"
+              aria-label="Slide 6"
+            >
+              Cuptor <i class="bi bi-arrow-right"></i>
+            </button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="7"
+              aria-label="Slide 7"
+            >
+              Garnituri <i class="bi bi-arrow-right"></i>
+            </button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="8"
+              aria-label="Slide 8"
+            >
+              Condimentare <i class="bi bi-arrow-right"></i>
+            </button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="9"
+              aria-label="Slide 9"
+            >
+              30 minute <i class="bi bi-arrow-right"></i>
+            </button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="10"
+              aria-label="Slide 10"
+            >
+              Cu Oreo <i class="bi bi-arrow-right"></i>
+            </button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="11"
+              aria-label="Slide 11"
+            >
+              30 minute desert<i class="bi bi-arrow-right"></i>
+            </button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <a href="/pages/main page recipes/specifically-Chinese.html"
+                ><img
+                  src="/images/Sectiunea 2, pagina princip/Specific chinezesc.jpeg"
+                  class="d-block"
+                  alt="Specific chinezesc"
+                  width="400"
+                  height="450"
+              /></a>
+            </div>
+            <div class="carousel-item">
+              <a href="/pages/main page recipes/slow-cooking.html"
+                ><img
+                  src="/images/Sectiunea 2, pagina princip/Slow cooking.jpeg"
+                  class="d-block"
+                  alt="Slow cooking"
+                  width="350"
+                  height="450"
+              /></a>
+            </div>
+            <div class="carousel-item">
+              <a href="/pages/main page recipes/peste.html"
+                ><img
+                  src="/images/Sectiunea 2, pagina princip/Peste.jpeg"
+                  class="d-block"
+                  alt="Peste"
+                  width="500"
+                  height="450"
+              /></a>
+            </div>
+            <div class="carousel-item">
+              <a href="/pages/main page recipes/paste.html"
+                ><img
+                  src="/images/Sectiunea 2, pagina princip/Paste.jpeg"
+                  class="d-block"
+                  alt="Paste"
+                  width="400"
+                  height="450"
+              /></a>
+            </div>
+            <div class="carousel-item">
+              <a href="/pages/main page recipes/nutritive.html"
+                ><img
+                  src="/images/Sectiunea 2, pagina princip/Nutritive.jpeg"
+                  class="d-block"
+                  alt="Nutritive"
+                  width="400"
+                  height="450"
+              /></a>
+            </div>
+            <div class="carousel-item">
+              <a href="/pages/main page recipes/lipie.html"
+                ><img
+                  src="/images/Sectiunea 2, pagina princip/Lipie.jpg"
+                  class="d-block"
+                  alt="Lipie"
+                  width="350"
+                  height="450"
+              /></a>
+            </div>
+            <div class="carousel-item">
+              <a href="/pages/main page recipes/cuptor.html"
+                ><img
+                  src="/images/Sectiunea 2, pagina princip/Cuptor.jpeg"
+                  class="d-block"
+                  alt="Cuptor"
+                  width="500"
+                  height="450"
+              /></a>
+            </div>
+            <div class="carousel-item">
+              <a href="/pages/main page recipes/garnituri.html"
+                ><img
+                  src="/images/Sectiunea 2, pagina princip/Garnituri.jpg"
+                  class="d-block"
+                  alt="Garnituri"
+                  width="350"
+                  height="450"
+              /></a>
+            </div>
+            <div class="carousel-item">
+              <a href="/pages/main page recipes/condimentare.html"
+                ><img
+                  src="/images/Sectiunea 2, pagina princip/Condimentare.jpeg"
+                  class="d-block"
+                  alt="Condimentare"
+                  width="450"
+                  height="450"
+              /></a>
+            </div>
+            <div class="carousel-item">
+              <a href="/pages/main page recipes/30min.html"
+                ><img
+                  src="/images/Sectiunea 2, pagina princip/30 minute.jpeg"
+                  class="d-block"
+                  alt="30 min"
+                  width="350"
+                  height="450"
+              /></a>
+            </div>
+            <div class="carousel-item">
+              <a href="/pages/main page recipes/oreo.html"
+                ><img
+                  src="/images/Sectiunea 2, pagina princip/Cu Oreo.jpeg"
+                  class="d-block"
+                  alt="Cu Oreo"
+                  width="550"
+                  height="450"
+              /></a>
+            </div>
+            <div class="carousel-item">
+              <a href="/pages/main page recipes/30mindesert.html"
+                ><img
+                  src="/images/Sectiunea 2, pagina princip/30 minute desert.jpeg"
+                  class="d-block"
+                  alt="30 min desert"
+                  width="550"
+                  height="450"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <br />
+      <br />
+      <br />
+      <section id="about-me">
+        <br />
+        <h1>Bun venit pe site-ul meu!</h1>
+        <h2>Rețete home-made și videoclipuri create special pentru tine.</h2>
+        <div class="container">
+          <div class="row">
+            <div class="col-4">
+              <img
+                src="/images/Sectiunea 3, pagina princip/IMG_1932.jpg"
+                alt="Poza cu Cristina"
+                width="240"
+                height="240"
+              />
+            </div>
+            <div class="col-6">
+              <p>
+                Bun venit în bucătăria mea! Numele meu este Aftode Cristina și
+                sunt blogger și vlogger în industria culinară. Pagina mea de
+                TikTok a fost lansată în 2022 și este locul în care îmi
+                împărtășesc pasiunea pentru gătit. Îmi place să încerc lucruri
+                noi și să le testez împreună cu familia mea și prietenii.
+                Fiecare rețetă este încercată și testată de către cei apropiați.
+                Sper că vă veți bucura de noul meu site!
+              </p>
+              <div class="col-6">
+                <img
+                  src="/images/Sectiunea 3, pagina princip/signature.png"
+                  width="150"
+                  height="100"
+                  alt="semnatura"
+                />
+                <button class="btn btn--primary">Citește mai mult</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br />
+      </section>
+      <br />
+      <br />
+      <br />
+      <section id="newsletter-section">
+        <div class="newsletter-container">
+          <div class="d-flex justify-content-center">
+            <h1>Alătură-te distracției în bucătărie!</h1>
+          </div>
+          <div class="d-flex justify-content-center">
+            <p>
+              Rămâi la curent cu ultimele mele rețete și videoclipuri postate.
+            </p>
+          </div>
+          <div class="d-flex justify-content-center">
+            <button class="btn-newslatter">Abonare</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="site-footer">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-sm">
+            <p class="footer-copyright">
+              Tot conținutul este generat de către Savori în bucătărie. Toate
+              drepturile rezervate.
+            </p>
+            <p class="footer-copyright">Creat de Cristina Aftode © 2023.</p>
+          </div>
+          <div class="footer-icons">
+            <div class="icon-instagram">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+                width="30"
+              >
+                <path
+                  d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                />
+              </svg>
+            </div>
+            <div class="icon-tiktok">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+                width="20"
+                class="icon-tiktok"
+              >
+                <path
+                  d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+      integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+      integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/scripts/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+  <html lang="en">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/styles/shared.css" />
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel&family=Comfortaa&family=Karla&family=Labrada&family=Libre+Baskerville:wght@400;700&family=Lora:ital,wght@0,700;1,400&family=Montserrat&family=Oswald:wght@400;700&family=Parisienne&display=swap"
+      rel="stylesheet"
+    />
+    <title>Dinner Information</title>
+    <head>
+      <style>
+        body {
+          margin: 0;
+          padding: 0;
+          background-color: #fff;
+        }
+
+        .container {
+          max-width: 800px;
+          margin: 0 auto;
+          padding: 20px;
+          background-color: #f2f2f2;
+        }
+
+        h1 {
+          text-align: center;
+          color: #333;
+          font-family: "Libre Baskerville", serif;
+        }
+        h2 {
+          font-family: "Libre Baskerville", serif;
+          padding: 10px;
+        }
+
+        p {
+          color: #666;
+          line-height: 1.5;
+          font-family: "Karla", sans-serif;
+        }
+
+        .highlight {
+          color: #ff7f50;
+          font-weight: bold;
+          font-family: "Karla", sans-serif;
+        }
+
+        .quote {
+          font-style: italic;
+          text-align: center;
+          margin: 20px 0;
+          color: #777;
+          font-family: "Karla", sans-serif;
+        }
+
+        li {
+          font-family: "Karla", sans-serif;
+        }
+        .image {
+          text-align: center;
+          margin: 20px 0;
+        }
+
+        .container img {
+          display: block;
+          max-width: 70%;
+          height: auto;
+          margin-left: auto;
+          margin-right: auto;
+          padding: 20px;
+        }
+
+        /* Responsive Styles */
+        @media screen and (max-width: 600px) {
+          .container {
+            padding: 10px;
+          }
+
+          h1 {
+            font-size: 24px;
+          }
+
+          .quote {
+            font-size: 16px;
+          }
+        }
+      </style>
+    </head>
+    <header>
+      <div class="container-principal">
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid p-0">
+            <a class="navbar-brand" href="/project-react/assets/index.html">
+              <img src="/logo.jpg" alt="Logo" width="120px" />
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto mb-lg-0">
+                <li class="nav-item">
+                  <a
+                    class="nav-link m-lg-4 p-0"
+                    href="/pages//main page/breakfast.html"
+                    >Breakfast</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link m-lg-4 p-0"
+                    href="/pages//main page/appetizers.html"
+                    >Appetizers</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link m-lg-4 p-0"
+                    href="/pages//main page/dinner.html"
+                    >Dinner</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link m-lg-4 p-0"
+                    href="/pages//main page/dessert.html"
+                    >Dessert</a
+                  >
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle m-lg-4 p-0"
+                    href="/project-react/assets/pages/main page/magicbox.html"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Magic box
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="/pages/main page/sauces.html"
+                        >Sauces</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="/pages//main page/soups.html"
+                        >Soups</a
+                      >
+                    </li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="/pages//main page/plan-de-mese.html"
+                        >Meal plan</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="style-form">
+                <form class="d-flex" role="search">
+                  <input
+                    class="form-control me-3"
+                    type="search"
+                    placeholder="Something delicious..."
+                    aria-label="Search"
+                  />
+                  <button class="btn btn-outline-dark me-5" type="submit">
+                    Search
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <body>
+      <div class="container">
+        <h1>About Dinner</h1>
+        <div class="quote">
+          "Dinner is the moment when the magic happens in the kitchen."
+        </div>
+        <div class="image-div">
+          <img
+            src="/images/Sectiunea 1, pagina princip/dinner.jpg"
+            alt="Dinner Image"
+          />
+        </div>
+        <p>
+          Dinner is a meal enjoyed in the evening, typically the last meal of
+          the day. It has a rich history and is often considered the main meal,
+          where families and friends come together to share good food and
+          connect.
+        </p>
+        <p>
+          When it comes to dinner, there are various traditions and customs
+          around the world. It can be a formal sit-down affair or a casual
+          gathering, depending on the culture and occasion. Dinner is not just
+          about nourishment but also about creating memorable experiences.
+        </p>
+        <h2>When to Take Dinner?</h2>
+        <p>
+          The timing of dinner varies across different cultures and individual
+          preferences. In many Western countries, dinner is typically served
+          between 6:00 PM and 8:00 PM. However, it's important to note that
+          there is no universal rule, and the timing can vary based on personal
+          schedules and cultural norms.
+        </p>
+        <h2>Types of Dinner</h2>
+        <p>
+          Dinners can be categorized into different types based on the occasion
+          and cuisine. Some popular types of dinner include:
+        </p>
+        <ul>
+          <li>
+            <span class="highlight">Family Dinner:</span> A gathering of family
+            members for a shared meal and quality time.
+          </li>
+          <li>
+            <span class="highlight">Formal Dinner:</span> A structured and
+            elegant dinner often held for special events or celebrations.
+          </li>
+          <li>
+            <span class="highlight">Casual Dinner:</span> A relaxed and informal
+            dinner, usually with close friends or for everyday meals.
+          </li>
+          <li>
+            <span class="highlight">Theme Dinner:</span> A dinner centered
+            around a particular theme or cuisine, adding an element of fun and
+            creativity.
+          </li>
+        </ul>
+        <h2>Popular Choices</h2>
+        <p>
+          There is a wide range of dishes that are commonly enjoyed during
+          dinner, including:
+        </p>
+        <ul>
+          <li>
+            <span class="highlight">Roasted Chicken:</span> A classic and
+            flavorful dish that is loved by many.
+          </li>
+          <li>
+            <span class="highlight">Spaghetti Bolognese:</span> A hearty pasta
+            dish with a rich tomato and meat-based sauce.
+          </li>
+          <li>
+            <span class="highlight">Grilled Salmon:</span> A healthy and
+            delicious choice, often served with vegetables or a side of rice.
+          </li>
+          <li>
+            <span class="highlight">Vegetable Stir-Fry:</span> A quick and
+            nutritious option that combines various vegetables with savory
+            sauces.
+          </li>
+        </ul>
+        <h2>Pairings</h2>
+        <p>
+          To enhance the dining experience, certain foods and beverages are
+          often paired with dinner dishes. Some popular pairings include:
+        </p>
+        <ul>
+          <li>
+            <span class="highlight">Red Wine:</span> Often paired with red meat
+            dishes or rich, flavorful meals.
+          </li>
+          <li>
+            <span class="highlight">White Wine:</span> Complements seafood,
+            poultry, and lighter dishes.
+          </li>
+          <li>
+            <span class="highlight">Craft Beer:</span> A versatile choice that
+            can be paired with a variety of cuisines and flavors.
+          </li>
+          <li>
+            <span class="highlight">Sparkling Water:</span> A refreshing and
+            hydrating option that complements a wide range of dishes.
+          </li>
+        </ul>
+      </div>
+      <footer id="site-footer">
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-sm">
+              <p class="footer-copyright">
+                Tot conținutul este generat de către Savori în bucătărie. Toate
+                drepturile rezervate.
+              </p>
+              <p class="footer-copyright">Creat de Cristina Aftode © 2023.</p>
+            </div>
+            <div class="footer-icons">
+              <div class="icon-instagram">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                  width="30"
+                >
+                  <path
+                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                  />
+                </svg>
+              </div>
+              <div class="icon-tiktok">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                  width="20"
+                  class="icon-tiktok"
+                >
+                  <path
+                    d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <script
+        src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+        integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+        integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+        crossorigin="anonymous"
+      ></script>
+    </body>
+  </html>
+</html>

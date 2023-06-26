@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+  <html>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/styles/shared.css" />
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel&family=Comfortaa&family=Karla&family=Labrada&family=Libre+Baskerville:wght@400;700&family=Lora:ital,wght@0,700;1,400&family=Montserrat&family=Oswald:wght@400;700&family=Parisienne&display=swap"
+      rel="stylesheet"
+    />
+    <title>Oreo Recipes</title>
+    <head>
+      <style>
+        body {
+          background-color: #f2f2f2;
+          color: rgb(35, 34, 34);
+        }
+
+        header {
+          background-color: white;
+        }
+
+        .container {
+          max-width: 800px;
+          margin: 0 auto;
+          padding: 20px;
+          background-color: #fff;
+        }
+
+        h1 {
+          font-size: 28px;
+          text-align: center;
+          font-family: "Libre Baskerville", serif;
+          padding: 50px 0 0px 0;
+          color: rgb(86, 64, 64);
+          text-transform: uppercase;
+        }
+
+        .recipe-list {
+          max-width: 800px;
+          margin: 0 auto;
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          grid-gap: 20px;
+          padding: 20px;
+        }
+
+        .recipe-card {
+          background-color: #fff;
+          padding: 20px;
+          border-radius: 5px;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .recipe-card h2 {
+          margin-top: 0;
+          font-family: "Libre Baskerville", serif;
+          font-size: 18px;
+          text-transform: uppercase;
+          text-decoration: solid;
+        }
+
+        .recipe-card p {
+          margin-bottom: 10px;
+          line-height: 2;
+          font-family: "Karla", sans-serif;
+          font-size: 13px;
+        }
+
+        .recipe-card img {
+          max-width: 50%;
+          height: auto;
+          border-radius: 5px;
+          margin-bottom: 10px;
+          align-items: center;
+        }
+
+        #site-footer {
+          background-color: #f2f2f2;
+        }
+        @media (max-width: 600px) {
+          .recipe-list {
+            grid-template-columns: 1fr;
+          }
+        }
+      </style>
+    </head>
+    <header>
+      <div class="container-principal">
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid p-0">
+            <a class="navbar-brand" href="/project-react/assets/index.html">
+              <img src="/logo.jpg" alt="Logo" width="120px" />
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto mb-lg-0">
+                <li class="nav-item">
+                  <a
+                    class="nav-link m-lg-4 p-0"
+                    href="/pages//main page/breakfast.html"
+                    >Breakfast</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link m-lg-4 p-0"
+                    href="/pages//main page/appetizers.html"
+                    >Appetizers</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link m-lg-4 p-0"
+                    href="/pages//main page/dinner.html"
+                    >Dinner</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link m-lg-4 p-0"
+                    href="/pages//main page/dessert.html"
+                    >Dessert</a
+                  >
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle m-lg-4 p-0"
+                    href="/project-react/assets/pages/main page/magicbox.html"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Magic box
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="/pages/main page/sauces.html"
+                        >Sauces</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="/pages//main page/soups.html"
+                        >Soups</a
+                      >
+                    </li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="/pages//main page/plan-de-mese.html"
+                        >Meal plan</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="style-form">
+                <form class="d-flex" role="search">
+                  <input
+                    class="form-control me-3"
+                    type="search"
+                    placeholder="Something delicious..."
+                    aria-label="Search"
+                  />
+                  <button class="btn btn-outline-dark me-5" type="submit">
+                    Search
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <body>
+      <div class="container">
+        <h1>Oreo Recipes</h1>
+        <div class="recipe-list">
+          <div class="recipe-card">
+            <h2>Oreo Cheesecake</h2>
+            <p>
+              A delicious and creamy cheesecake with an Oreo cookie crust. This
+              heavenly dessert combines the richness of a classic cheesecake
+              with the irresistible flavor of Oreos. The creamy filling is made
+              with cream cheese, sugar, and vanilla extract, while the crust is
+              a combination of crushed Oreos and melted butter. It's the perfect
+              treat for Oreo lovers and cheesecake enthusiasts. Whether it's a
+              special occasion or just a craving for something sweet, this Oreo
+              cheesecake is sure to impress!
+            </p>
+            <img
+              src="/images/Sectiunea 4, pagina princip/dosar fără titlu/Oreo/oreocheesecake.jpg"
+              alt="Oreo Cheesecake"
+            />
+          </div>
+
+          <div class="recipe-card">
+            <h2>Oreo Ice Cream Cake</h2>
+            <p>
+              Indulgent ice cream cake with layers of Oreo goodness. This frozen
+              dessert is a true delight for Oreo lovers. It features layers of
+              crushed Oreos, vanilla ice cream, and fudge sauce, all topped with
+              whipped cream and more crushed Oreos. It's easy to assemble and
+              requires no baking. Simply layer the ingredients in a springform
+              pan and freeze until firm. Perfect for birthdays, celebrations, or
+              any time you want to treat yourself to a delicious ice cream cake.
+            </p>
+            <img
+              src="/images/Sectiunea 4, pagina princip/dosar fără titlu/Oreo/oreoicecream.jpg"
+              alt="Oreo Ice Cream Cake"
+            />
+          </div>
+
+          <div class="recipe-card">
+            <h2>Oreo Milkshake</h2>
+            <p>
+              A refreshing milkshake made with Oreo cookies. This indulgent
+              treat is a blend of vanilla ice cream, milk, and crushed Oreos.
+              It's thick, creamy, and loaded with the classic Oreo flavor. Top
+              it off with some whipped cream and an extra Oreo cookie for a
+              delightful presentation. Enjoy this cool and satisfying milkshake
+              on a hot summer day or whenever you crave a sweet and creamy
+              dessert. It's a guaranteed crowd-pleaser for Oreo enthusiasts of
+              all ages!
+            </p>
+            <img
+              src="/images/Sectiunea 4, pagina princip/dosar fără titlu/Oreo/oreomilkshake.jpg"
+              alt="Oreo Milkshake"
+            />
+          </div>
+
+          <div class="recipe-card">
+            <h2>Oreo Truffles</h2>
+            <p>
+              Decadent chocolate truffles made with crushed Oreos. These
+              bite-sized treats are a delightful combination of creamy Oreo
+              filling and rich chocolate coating. Made with just a few
+              ingredients, they are incredibly easy to prepare. Simply mix
+              crushed Oreos with cream cheese, roll them into balls, and dip
+              them in melted chocolate. Allow them to set and enjoy these
+              indulgent Oreo truffles as a special treat or a homemade gift for
+              friends and family.
+            </p>
+            <img
+              src="/images/Sectiunea 4, pagina princip/dosar fără titlu/Oreo/oreotruffles.jpg"
+              alt="Oreo Truffles"
+            />
+          </div>
+
+          <div class="recipe-card">
+            <h2>Oreo Stuffed Brownies</h2>
+            <p>
+              Fudgy brownies with a surprise Oreo cookie layer inside. These
+              decadent brownies take the classic chocolatey treat to a whole new
+              level. They are rich, fudgy, and packed with Oreo goodness. The
+              brownie batter is poured over a layer of Oreo cookies, creating a
+              delightful contrast of textures and flavors. Bake them until the
+              edges are set and the center is slightly gooey for the ultimate
+              Oreo-stuffed indulgence.
+            </p>
+            <img
+              src="/images/Sectiunea 4, pagina princip/dosar fără titlu/Oreo/oreobrownie.jpg"
+              alt="Oreo Stuffed Brownies"
+            />
+          </div>
+
+          <div class="recipe-card">
+            <h2>Oreo Ice Cream Sandwiches</h2>
+            <p>
+              Delightful frozen treats with Oreo cookies and vanilla ice cream.
+              These homemade ice cream sandwiches are a nostalgic and
+              irresistible dessert. Simply sandwich a scoop of vanilla ice cream
+              between two Oreo cookies, and roll the edges in crushed Oreos for
+              an extra touch of deliciousness. Freeze until firm, and you have a
+              delightful treat ready to enjoy. Perfect for hot summer days or
+              any time you want to indulge in a classic frozen treat.
+            </p>
+            <img
+              src="/images/Sectiunea 4, pagina princip/dosar fără titlu/Oreo/oic.jpg"
+              alt="Oreo Ice Cream Sandwiches"
+            />
+          </div>
+          <div class="recipe-card">
+            <h2>Oreo Pancakes</h2>
+            <p>
+              Fluffy pancakes loaded with crushed Oreos. These breakfast treats
+              are perfect for Oreo lovers looking to start their day with a
+              sweet twist. The pancake batter is mixed with crushed Oreos,
+              giving them a delightful chocolatey flavor and a slight crunch.
+              Serve them with a drizzle of maple syrup and a dusting of powdered
+              sugar for a truly indulgent breakfast or brunch. These Oreo
+              pancakes are guaranteed to put a smile on your face.
+            </p>
+            <img
+              src="/images/Sectiunea 4, pagina princip/dosar fără titlu/Oreo/pancake.jpg"
+              alt="Oreo Pancakes"
+            />
+          </div>
+
+          <div class="recipe-card">
+            <h2>Oreo Parfait</h2>
+            <p>
+              Layers of creamy Greek yogurt, crushed Oreos, and a drizzle of
+              honey come together to create a delightful parfait. This simple
+              yet delicious dessert is perfect for breakfast or as a healthy
+              snack. The combination of tangy yogurt, crunchy Oreos, and natural
+              sweetness from the honey is a real treat for your taste buds.
+              Serve it in a glass or jar for a visually appealing dessert that's
+              as beautiful as it is tasty. Enjoy this Oreo parfait guilt-free!
+            </p>
+            <img
+              src="/images/Sectiunea 4, pagina princip/dosar fără titlu/Oreo/oreoparfait.jpg"
+              alt="Oreo Parfait"
+            />
+          </div>
+        </div>
+      </div>
+      <footer id="site-footer">
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-sm">
+              <p class="footer-copyright">
+                Tot conținutul este generat de către Savori în bucătărie. Toate
+                drepturile rezervate.
+              </p>
+              <p class="footer-copyright">Creat de Cristina Aftode © 2023.</p>
+            </div>
+            <div class="footer-icons">
+              <div class="icon-instagram">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                  width="30"
+                >
+                  <path
+                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                  />
+                </svg>
+              </div>
+              <div class="icon-tiktok">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                  width="20"
+                  class="icon-tiktok"
+                >
+                  <path
+                    d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <script
+        src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+        integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+        integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+        crossorigin="anonymous"
+      ></script>
+    </body>
+  </html>
+</html>

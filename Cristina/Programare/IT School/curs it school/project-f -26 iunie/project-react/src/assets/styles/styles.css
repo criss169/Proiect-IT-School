@@ -1,0 +1,650 @@
+.title-slider {
+  font-family: "Libre Baskerville", serif;
+  font-size: 34px;
+}
+
+.subtitle-slider {
+  font-family: "Karla", sans-serif;
+  font-size: 18px;
+  font-style: italic;
+}
+
+.c-item {
+  height: 410px;
+}
+
+.c-img {
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.4);
+}
+
+.carousel-inner a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.container-slider {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-bottom: 150px;
+}
+
+#sectiunea2 {
+  padding: 60px 70px 60px 70px;
+}
+.card1 {
+  border-radius: 20px !important;
+  width: 200px !important;
+  height: 272px !important;
+  overflow: hidden !important;
+  border: 4px solid rgb(233, 215, 215) !important;
+  position: relative !important;
+  text-align: center;
+}
+
+.card1 img {
+  object-fit: cover !important;
+  border-radius: 15px !important;
+  filter: brightness(0.9);
+}
+.card-body1 {
+  width: 100% !important;
+  height: 100% !important;
+  top: 0 !important;
+  right: 0 !important;
+  position: absolute !important;
+  background-color: #f6ebeb !important;
+  border-radius: 15px !important;
+  transition: all 1.5s cubic-bezier(0.7, -0.5, 0.4, 1.8);
+  transform-style: preserve-3d;
+}
+.card-body1 p {
+  font-family: "Karla", sans-serif !important;
+  font-style: italic;
+  font-size: 12px;
+  color: rgb(101, 74, 74) !important;
+  position: relative;
+  top: 70px;
+}
+.card-body1 h2 {
+  color: rgb(81, 48, 48) !important;
+  font-family: "Libre Baskerville", serif !important;
+  font-size: 16px;
+  position: relative;
+  top: 60px;
+}
+.card1:hover .card-body1 {
+  right: 0;
+  opacity: 0.01;
+  transform: rotateY(180deg);
+}
+#sectiunea2 .card-btn {
+  color: rgb(236, 228, 228) !important;
+  background-color: rgb(130, 102, 102) !important;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-transform: capitalize;
+  border: none;
+  outline: none;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  top: 80px;
+  font-size: 10px;
+}
+
+#food-cards {
+  padding: 10px 70px 30px 70px;
+}
+#food-cards .card {
+  width: 12rem;
+}
+
+.food-cards-title {
+  font-family: "Karla", serif;
+  text-transform: uppercase;
+  font-size: 11px;
+  margin-left: 80px;
+  padding-bottom: 30px;
+}
+
+.food-cards-container {
+  padding: 0 140px 0 160px;
+}
+.card-title {
+  font-family: "Libre Baskerville", serif;
+  font-size: 14px;
+  text-align: center;
+}
+
+#food-cards .card {
+  transition: all 0.3s;
+}
+#food-cards .card:hover {
+  transform: scale(1.1);
+  transform: translateY(-0.5%);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+#food-cards img {
+  object-fit: cover;
+}
+
+#food-cards img:hover {
+  object-fit: cover;
+  filter: brightness(0.7);
+}
+
+#food-cards .list-group {
+  font-family: "Karla", serif;
+  text-align: center;
+  font-size: 13px;
+}
+
+#carousel-slider {
+  padding: 60px 70px 60px 70px;
+}
+#carousel-slider .carousel-indicators {
+  position: unset;
+  flex-direction: column;
+  width: 100%;
+  margin: 0;
+  padding: 1em;
+}
+#carousel-slider .carousel-indicators [data-bs-target] {
+  text-indent: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  background-color: transparent;
+  border-bottom: 1px solid #000;
+  border-top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#carousel-slider button {
+  font-family: "Libre Baskerville", serif;
+  font-size: 14px;
+  color: rgb(31, 29, 29);
+}
+#carousel-slider .carousel-indicators [data-bs-target].active {
+  color: darkgoldenrod;
+}
+#carousel-slider .carousel {
+  background-color: #fbf4f4;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.5);
+  border-radius: 30px;
+}
+#carousel-slider .carousel-inner img {
+  max-height: 350px;
+  max-width: 100%;
+  padding: 1em;
+  margin-inline: auto;
+  border-radius: 30px;
+  filter: brightness(0.9);
+}
+#about-me {
+  background-color: #f4ebeb;
+  display: block;
+}
+#about-me h1 {
+  font-size: 25px;
+  font-family: "Libre Baskerville", serif;
+  text-align: center;
+  padding: 10px;
+}
+#about-me h2 {
+  font-size: 24px;
+  font-family: "Libre Baskerville", serif;
+  text-align: center;
+  padding: 0 0 65px 0;
+}
+
+#about-me p {
+  font-size: 16px;
+  font-family: "Karla", serif;
+  line-height: 2;
+  position: relative;
+  left: 34px;
+}
+
+#about-me img {
+  font-size: 18px;
+  font-family: "Karla", serif;
+  border-radius: 200px;
+}
+
+.row .btn {
+  border-radius: 40px;
+  border: 0;
+  font-size: 18px;
+  font-weight: 800;
+  margin: 10px 0;
+  padding: 10px 10px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.btn--primary {
+  background-color: rgb(130, 102, 102);
+  color: white;
+  font-family: "Karla", serif;
+  width: 250px;
+}
+
+.btn--primary:hover {
+  background-color: rgb(156, 129, 129);
+}
+
+#subscribe-mail-section {
+  width: 1380px;
+  height: 700px;
+  padding: 10px 70px 10px 70px;
+}
+.newslatter-signup-inner {
+  background-size: cover;
+  background-position: 20%;
+  width: 1300px;
+  height: 600px;
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.5);
+  border-radius: 30px;
+}
+
+.newslatter-signup-box {
+  color: white;
+  max-width: 33%;
+  min-width: auto;
+  min-height: auto;
+  padding: 50px 45px 50px 45px;
+  position: relative;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 20px;
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.5);
+}
+
+.nwform-title {
+  font-size: 30px;
+  font-family: "Libre Baskerville", serif;
+  font-weight: 700;
+  line-height: 50px;
+  text-shadow: 1px 1px rgb(130, 102, 102);
+}
+
+.nwform-field-container {
+  font-family: "Karla", serif;
+  padding-bottom: 10px;
+  font-size: 16px;
+}
+
+.nwform-submit-container {
+  font-family: "Karla", serif;
+  font-size: 15px;
+}
+
+#subscribe-mail-section button {
+  cursor: pointer;
+  display: inline-block;
+  border-radius: 33px;
+  background-color: #fff;
+}
+
+#newsletter-section {
+  padding: 70px;
+  background-color: #f4ebeb;
+}
+
+#newsletter-section h1 {
+  font-family: "Cinzel", serif;
+  font-size: 45px;
+  line-height: 54px;
+  padding: 10px;
+}
+
+#newsletter-section p {
+  font-family: "Karla", serif;
+  font-size: 15px;
+  padding: 2px;
+}
+
+.newsletter-container {
+  padding: 0 15px 0 15px;
+}
+
+.btn-newslatter {
+  background-color: rgb(146, 115, 115);
+  color: white;
+  font-family: "Karla", serif;
+  width: 130px;
+  box-shadow: 0 1px 5px rgba(133, 93, 93, 0.5);
+}
+
+.btn-newslatter:hover {
+  transform: translateY(-0.5%);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+#site-footer {
+  padding: 20px 70px 10px 70px;
+}
+
+.footer-text {
+  font-size: 13px;
+  font-family: "Karla", serif;
+}
+
+.footer-copyright {
+  font-size: 13px;
+  font-family: "Karla", serif;
+}
+
+.footer-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.icon-instagram {
+  position: relative;
+  right: 10px;
+}
+
+.icon-tiktok {
+  position: relative;
+  left: 10px;
+  top: 1.5px;
+}
+@media screen and (max-width: 1800px) {
+  #subscribe-mail-section {
+    width: 1000px;
+    height: 550px;
+    padding: 5px 30px 5px 55px;
+    margin: 0;
+  }
+  .newslatter-signup-inner {
+    width: 900px;
+    height: 450px;
+  }
+
+  .newslatter-signup-box {
+    max-width: 350px;
+    min-width: 100px;
+    min-height: 200px;
+    padding: 0px 20px 0px 20px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #food-cards {
+    padding: 0 10px 0px 10px;
+    overflow: hidden;
+  }
+  #food-cards .card {
+    width: 10rem;
+  }
+  #subscribe-mail-section {
+    width: 950px;
+    height: 550px;
+    padding: 5px 30px 5px 55px;
+    margin: 0;
+  }
+  .newslatter-signup-inner {
+    width: 900px;
+    height: 450px;
+  }
+
+  .newslatter-signup-box {
+    max-width: 350px;
+    min-width: 100px;
+    min-height: 200px;
+    padding: 0px 20px 0px 20px;
+  }
+  #newsletter-section h1 {
+    text-align: center;
+  }
+
+  #newsletter-section p {
+    text-align: center;
+  }
+  .nwform-title {
+    font-size: 12px;
+  }
+
+  .nwform-field-container {
+    padding-bottom: 30px;
+    font-size: 12px;
+  }
+
+  .nwform-submit-container {
+    font-size: 10px;
+    position: relative;
+    bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  #food-cards {
+    padding: 0 10px 0px 10px;
+    overflow: hidden;
+  }
+  #food-cards .card {
+    width: 7rem;
+  }
+  .food-cards-title h6 {
+    font-size: 14px;
+    margin-left: 0;
+    padding-bottom: 0;
+    position: relative;
+    right: 3px;
+  }
+
+  #subscribe-mail-section {
+    width: 700px;
+    height: 550px;
+    padding: 5px 30px 5px 55px;
+    margin: 0;
+  }
+  .newslatter-signup-inner {
+    width: 650px;
+    height: 450px;
+  }
+
+  .newslatter-signup-box {
+    max-width: 250px;
+    min-width: 100px;
+    min-height: 200px;
+    padding: 0px 20px 0px 20px;
+  }
+
+  .nwform-title {
+    font-size: 12px;
+  }
+
+  .nwform-field-container {
+    padding-bottom: 30px;
+    font-size: 10px;
+  }
+
+  .nwform-submit-container {
+    font-size: 8px;
+    position: relative;
+    bottom: 10px;
+  }
+  #newsletter-section h1 {
+    text-align: center;
+  }
+
+  #newsletter-section p {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .c-item {
+    height: 300px;
+  }
+
+  #sectiunea2 {
+    padding: 40px 50px 40px 50px;
+  }
+
+  .card1 {
+    height: 180px !important;
+    border: 2px solid rgb(233, 215, 215) !important;
+  }
+  .card-body1 p {
+    font-size: 9px;
+    position: relative;
+    top: 40px;
+  }
+  .card-body1 h2 {
+    font-size: 10px;
+    position: relative;
+    top: 30px;
+  }
+  #sectiunea2 .card-btn {
+    position: relative;
+    top: 30px;
+    font-size: 6px;
+    padding: 2px;
+    width: 55px;
+    height: 23px;
+  }
+  #food-cards {
+    padding: 0 0px 0px 15px;
+    overflow: hidden;
+  }
+  #food-cards .card {
+    width: 5rem;
+  }
+  .food-cards-title h6 {
+    font-size: 9px;
+    margin-left: 0;
+    padding-bottom: 0;
+    position: relative;
+    right: 20px;
+  }
+  #food-cards img {
+    object-fit: cover;
+  }
+
+  .food-cards-container {
+    padding: 0;
+  }
+  .card-title {
+    font-size: 8px;
+    text-align: center;
+  }
+
+  #food-cards .list-group {
+    font-size: 7px;
+  }
+
+  #carousel-slider {
+    padding: 50px 50px 0 50px;
+  }
+
+  #carousel-slider button {
+    font-size: 8px;
+  }
+  #carousel-slider img {
+    object-fit: contain;
+  }
+
+  #about-me h1 {
+    font-size: 12px;
+    padding: 10px;
+  }
+  #about-me h2 {
+    font-size: 14px;
+    padding: 0 0 55px 0;
+  }
+
+  #about-me p {
+    font-size: 10px;
+    line-height: 2;
+    position: relative;
+    left: 0px;
+  }
+
+  #about-me img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .row .btn {
+    font-size: 8px;
+    margin: 0;
+    padding: 0;
+    width: 100px;
+  }
+  #subscribe-mail-section {
+    width: 300px;
+    height: 490px;
+    padding: 5px 30px 5px 43px;
+    margin: 0;
+  }
+  .newslatter-signup-inner {
+    width: 300px;
+    height: 390px;
+  }
+
+  .newslatter-signup-box {
+    max-width: 200px;
+    min-width: 100px;
+    min-height: 200px;
+    padding: 0px 20px 0px 20px;
+  }
+
+  .nwform-title {
+    font-size: 12px;
+  }
+
+  .nwform-field-container {
+    padding-bottom: 30px;
+    font-size: 10px;
+  }
+
+  .nwform-submit-container {
+    font-size: 7px;
+  }
+  #newsletter-section {
+    padding: 40px 40px 40px 40px;
+  }
+  #newsletter-section h1 {
+    font-size: 15px;
+    line-height: 30px;
+    padding: 5px;
+    text-align: center;
+  }
+
+  #newsletter-section p {
+    font-family: "Karla", serif;
+    font-size: 9px;
+    padding: 2px;
+    text-align: center;
+  }
+
+  .newsletter-container {
+    padding: 0 15px 0 15px;
+  }
+
+  .btn-newslatter {
+    font-size: 9px;
+    width: 90px;
+  }
+
+  #site-footer {
+    padding: 20px 70px 10px 70px;
+  }
+
+  .footer-text,
+  .footer-copyright {
+    font-size: 8px;
+  }
+}

@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/styles/shared.css" />
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel&family=Comfortaa&family=Karla&family=Labrada&family=Libre+Baskerville:wght@400;700&family=Lora:ital,wght@0,700;1,400&family=Montserrat&family=Oswald:wght@400;700&family=Parisienne&display=swap"
+      rel="stylesheet"
+    />
+    <title>Sarmale</title>
+    <style>
+      #info-recipe {
+        position: relative;
+        text-align: center;
+        padding: 0 7rem 3rem 7rem;
+      }
+
+      #info-recipe img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+      }
+
+      .image-caption {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #333;
+        color: #fff;
+        font-size: 30px;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-family: "Libre Baskerville", serif;
+      }
+      .recipe-description {
+        text-align: center;
+        padding: 20px;
+        color: #555;
+        font-size: 14px;
+        font-weight: bold;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+        margin: 10px auto;
+        line-height: 1.6;
+        font-family: "Karla", sans-serif;
+      }
+      .container-food {
+        border: 2px solid #d22d74;
+        margin: 0 130px 0 130px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+      }
+
+      .title {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      .description {
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+
+      .recipe-details {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+
+      .time {
+        display: inline-block;
+        margin-right: 10px;
+        margin-bottom: 5px;
+      }
+
+      ul {
+        list-style: none;
+        line-height: 1.5;
+      }
+
+      .checkbox-label {
+        display: block;
+        margin-left: -30px;
+        padding: 1px;
+      }
+
+      hr {
+        width: 200px;
+        margin: 60px auto;
+        border: 1px solid grey;
+      }
+      label {
+        padding-right: 50px;
+      }
+      .instructions {
+        list-style-type: decimal;
+        padding-left: 20px;
+        line-height: 2;
+      }
+      .ingredients-list {
+        padding: 20px 0 0 0;
+      }
+      .instructions-list {
+        padding: 0 0 20px 0;
+      }
+
+      .instagram {
+        float: left;
+        margin-right: 10px;
+      }
+      .checked {
+        color: green;
+      }
+      #site-footer {
+        background-color: #f2f2f2;
+      }
+      /* Media Queries */
+      @media screen and (max-width: 767px) {
+        .image-caption {
+          font-size: 20px;
+          padding: 5px 10px;
+          top: 40%;
+          left: 50%;
+          transform: translate(-50%, -60%);
+        }
+      }
+      @media only screen and (max-width: 600px) {
+        .image-caption {
+          font-size: 18px;
+          padding: 5px 10px;
+          top: 40%;
+          left: 50%;
+          transform: translate(-50%, -60%);
+        }
+        .title {
+          font-size: 20px;
+        }
+
+        .description {
+          font-size: 14px;
+        }
+
+        .recipe-details {
+          flex-direction: column;
+        }
+
+        .time {
+          margin-bottom: 10px;
+        }
+
+        .instagram {
+          float: none;
+          margin-right: 0;
+          margin-bottom: 10px;
+        }
+        @media screen and (max-width: 479px) {
+          .image-caption {
+            font-size: 19px;
+            padding: 5px;
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
+      }
+    </style>
+  </head>
+  <header>
+    <div class="container-principal">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid p-0">
+          <a class="navbar-brand" href="/project-react/assets/index.html">
+            <img src="/logo.jpg" alt="Logo" width="120px" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link m-lg-4 p-0"
+                  href="/pages//main page/breakfast.html"
+                  >Breakfast</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link m-lg-4 p-0"
+                  href="/pages//main page/appetizers.html"
+                  >Appetizers</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link m-lg-4 p-0"
+                  href="/pages//main page/dinner.html"
+                  >Dinner</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link m-lg-4 p-0"
+                  href="/pages//main page/dessert.html"
+                  >Dessert</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle m-lg-4 p-0"
+                  href="/project-react/assets/pages/main page/magicbox.html"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Magic box
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="/pages/main page/sauces.html"
+                      >Sauces</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/pages//main page/soups.html"
+                      >Soups</a
+                    >
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="/pages//main page/plan-de-mese.html"
+                      >Meal plan</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <div class="style-form">
+              <form class="d-flex" role="search">
+                <input
+                  class="form-control me-3"
+                  type="search"
+                  placeholder="Something delicious..."
+                  aria-label="Search"
+                />
+                <button class="btn btn-outline-dark me-5" type="submit">
+                  Search
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <body>
+    <section id="info-recipe">
+      <img
+        src="/images/Sectiunea 4, pagina princip/F43D6CFF-99DE-45C7-BF41-47C86C481664_1_105_c.jpeg"
+        alt="Sarmale"
+        class="main-image"
+      />
+      <p class="image-caption">Sarmale</p>
+      <p class="recipe-description">
+        Sarmale, also known as "cabbage rolls," is a traditional Romanian dish
+        that is popular in many Eastern European countries. It is made by
+        filling cabbage leaves with a mixture of ground meat, usually pork,
+        mixed with rice, onions, herbs, and spices. The cabbage rolls are then
+        cooked in a flavorful tomato-based sauce until tender and juicy.
+      </p>
+    </section>
+    <div class="container-food">
+      <div>
+        <h2 class="title">Recipe Details</h2>
+        <svg
+          class="icon"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          width="20"
+        >
+          <path
+            d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM13 7H11V12.73L15.24 15.76L16 14.97L13 13V7Z"
+            fill="#000000"
+          />
+        </svg>
+        <span class="time">Prep Time: 15 minutes</span>
+        <svg
+          class="icon"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          width="20"
+        >
+          <path
+            d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM13 7H11V12.73L15.24 15.76L16 14.97L13 13V7Z"
+            fill="#000000"
+          />
+        </svg>
+        <span class="time">Cook Time: 20 minutes</span>
+        <svg
+          class="icon"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          width="20"
+        >
+          <path
+            d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM13 7H11V12.73L15.24 15.76L16 14.97L13 13V7Z"
+            fill="#000000"
+          />
+        </svg>
+        <span class="time">Total Time: 35 minutes</span>
+        <svg
+          class="icon"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          width="20"
+        >
+          <path
+            d="M19 20H5C3.9 20 3 19.1 3 18V9C3 8.5 3.2 8 3.5 7.5L7.5 3.5C8 3.2 8.5 3 9 3H15C15.5 3 16 3.2 16.5 3.5L20.5 7.5C20.8 8 21 8.5 21 9V18C21 19.1 20.1 20 19 20ZM7.83 5L5 7.83V18H19V7.83L16.17 5H7.83Z"
+            fill="#000000"
+          />
+        </svg>
+
+        <span class="time">Servings: 6</span>
+      </div>
+      <div class="ingredients-list">
+        <ul>
+          <li>
+            <label class="checkbox-label"
+              ><input type="checkbox" /> 1 large cabbage</label
+            >
+          </li>
+          <li>
+            <label class="checkbox-label"
+              ><input type="checkbox" /> 500g ground pork</label
+            >
+          </li>
+          <li>
+            <label class="checkbox-label"
+              ><input type="checkbox" /> 200g rice</label
+            >
+          </li>
+          <li>
+            <label class="checkbox-label"
+              ><input type="checkbox" /> 1 onion, finely chopped</label
+            >
+          </li>
+          <li>
+            <label class="checkbox-label"
+              ><input type="checkbox" /> 2 cloves of garlic, minced</label
+            >
+          </li>
+          <li>
+            <label class="checkbox-label"
+              ><input type="checkbox" /> 1 tablespoon tomato paste</label
+            >
+          </li>
+          <li>
+            <label class="checkbox-label"
+              ><input type="checkbox" /> 1 teaspoon dried thyme</label
+            >
+          </li>
+          <li>
+            <label class="checkbox-label"
+              ><input type="checkbox" /> Salt and pepper to taste</label
+            >
+          </li>
+          <li>
+            <label class="checkbox-label"
+              ><input type="checkbox" /> 1 teaspoon dried paprika</label
+            >
+          </li>
+          <li>
+            <label class="checkbox-label"
+              ><input type="checkbox" /> 500ml tomato juice</label
+            >
+          </li>
+          <li>
+            <label class="checkbox-label"
+              ><input type="checkbox" /> Fresh parsley, chopped (for
+              garnish)</label
+            >
+          </li>
+        </ul>
+      </div>
+      <hr />
+      <div class="instructions-list">
+        <ul class="instructions">
+          <li>
+            Remove the cabbage leaves from the head of cabbage and blanch them
+            in boiling water for a few minutes to soften.
+          </li>
+          <li>
+            In a large bowl, mix together the ground pork, rice, chopped onion,
+            minced garlic, tomato paste, dried thyme, dried paprika, salt, and
+            pepper.
+          </li>
+          <li>
+            Take a cabbage leaf and place a spoonful of the meat mixture in the
+            center. Roll the leaf tightly, tucking in the sides as you go.
+            Repeat with the remaining leaves and mixture.
+          </li>
+          <li>
+            Place the rolled cabbage leaves (sarmale) in a large pot in a single
+            layer.
+          </li>
+          <li>
+            Pour the tomato juice over the sarmale, ensuring they are completely
+            covered. If needed, add some water or additional tomato juice.
+          </li>
+          <li>
+            Cover the pot and simmer on low heat for about 2 hours or until the
+            rice is cooked and the flavors have melded together.
+          </li>
+          <li>Serve the sarmale hot, garnished with chopped parsley.</li>
+        </ul>
+      </div>
+      <div>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 448 512"
+          width="30"
+        >
+          <path
+            d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+          />
+        </svg>
+        <span>Tried this recipe? Mention @crisstasty on the story!</span>
+      </div>
+    </div>
+    <footer id="site-footer">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-sm">
+            <p class="footer-copyright">
+              Tot conținutul este generat de către Savori în bucătărie. Toate
+              drepturile rezervate.
+            </p>
+            <p class="footer-copyright">Creat de Cristina Aftode © 2023.</p>
+          </div>
+          <div class="footer-icons">
+            <div class="icon-instagram">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+                width="30"
+              >
+                <path
+                  d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                />
+              </svg>
+            </div>
+            <div class="icon-tiktok">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+                width="20"
+                class="icon-tiktok"
+              >
+                <path
+                  d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+      integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+      integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

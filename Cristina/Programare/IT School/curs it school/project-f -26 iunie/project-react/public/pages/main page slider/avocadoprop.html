@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/styles/shared.css" />
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel&family=Comfortaa&family=Karla&family=Labrada&family=Libre+Baskerville:wght@400;700&family=Lora:ital,wght@0,700;1,400&family=Montserrat&family=Oswald:wght@400;700&family=Parisienne&display=swap"
+      rel="stylesheet"
+    />
+    <title>Avocado Benefits</title>
+    <style>
+      .header {
+        padding: 20px;
+        text-align: center;
+        font-family: "Libre Baskerville", serif;
+        color: #333;
+      }
+
+      .content {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 20px;
+        font-family: "Karla", sans-serif;
+        background-color: #f8f8f8;
+        line-height: 1.5;
+      }
+
+      h1 {
+        font-size: 35px;
+        padding: 10px;
+      }
+
+      h2 {
+        color: #333;
+        padding: 10px;
+      }
+
+      .recipes {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      .recipe {
+        width: 45%;
+        margin-bottom: 20px;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 4px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .recipe h3 {
+        margin-top: 0;
+        padding: 10px;
+      }
+      .image img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        border-radius: 4px 4px 0 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container-principal">
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid p-0">
+            <a class="navbar-brand" href="/project-react/assets/index.html">
+              <img src="/logo.jpg" alt="Logo" width="120px" />
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto mb-lg-0">
+                <li class="nav-item">
+                  <a
+                    class="nav-link m-lg-4 p-0"
+                    href="/pages//main page/breakfast.html"
+                    >Breakfast</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link m-lg-4 p-0"
+                    href="/pages//main page/appetizers.html"
+                    >Appetizers</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link m-lg-4 p-0"
+                    href="/pages//main page/dinner.html"
+                    >Dinner</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link m-lg-4 p-0"
+                    href="/pages//main page/dessert.html"
+                    >Dessert</a
+                  >
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle m-lg-4 p-0"
+                    href="/project-react/assets/pages/main page/magicbox.html"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Magic box
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="/pages/main page/sauces.html"
+                        >Sauces</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="/pages//main page/soups.html"
+                        >Soups</a
+                      >
+                    </li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="/pages//main page/plan-de-mese.html"
+                        >Meal plan</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="style-form">
+                <form class="d-flex" role="search">
+                  <input
+                    class="form-control me-3"
+                    type="search"
+                    placeholder="Something delicious..."
+                    aria-label="Search"
+                  />
+                  <button class="btn btn-outline-dark me-5" type="submit">
+                    Search
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <div class="content">
+      <div class="header">
+        <h1>Avocado Benefits</h1>
+        <p>This is a miraculous fruit!</p>
+      </div>
+      <h2>Benefits of Avocado</h2>
+      <p>
+        Avocado is a superfood packed with essential nutrients. Here are some
+        key benefits:
+      </p>
+      <ul>
+        <li>Rich in healthy fats</li>
+        <li>Loaded with vitamins and minerals</li>
+        <li>High in fiber</li>
+        <li>May help lower cholesterol</li>
+        <li>Supports weight management</li>
+      </ul>
+
+      <h2>Healthy Benefits</h2>
+      <p>Avocado offers several health benefits:</p>
+      <ul>
+        <li>Boosts heart health</li>
+        <li>Enhances digestion</li>
+        <li>Promotes skin health</li>
+        <li>Aids in nutrient absorption</li>
+        <li>Reduces inflammation</li>
+      </ul>
+      <h2>Avocado Recipes</h2>
+      <div class="recipes">
+        <div class="recipe">
+          <div class="image">
+            <img
+              src="/images/Sectiunea 1, pagina princip/avocado-toast.jpg"
+              alt="Avocado Toast"
+            />
+          </div>
+          <h3>Avocado Toast</h3>
+          <p>Ingredients:</p>
+          <ul>
+            <li>1 ripe avocado</li>
+            <li>2 slices of whole grain bread</li>
+            <li>1 tablespoon lemon juice</li>
+            <li>Salt and pepper to taste</li>
+          </ul>
+          <p>Instructions:</p>
+          <ol>
+            <li>Toast the bread slices until golden brown.</li>
+            <li>
+              Mash the avocado in a bowl and mix in lemon juice, salt, and
+              pepper.
+            </li>
+            <li>Spread the avocado mixture on the toast.</li>
+            <li>Enjoy!</li>
+          </ol>
+        </div>
+        <div class="recipe">
+          <div class="image">
+            <img
+              src="/images/Sectiunea 1, pagina princip/avocado-smoothie.jpg"
+              alt="Avocado Smoothie"
+            />
+          </div>
+          <h3>Avocado Smoothie</h3>
+          <p>Ingredients:</p>
+          <ul>
+            <li>1 ripe avocado</li>
+            <li>1 ripe banana</li>
+            <li>1 cup spinach</li>
+            <li>1 cup almond milk (or any milk of your choice)</li>
+          </ul>
+          <p>Instructions:</p>
+          <ol>
+            <li>Peel and pit the avocado and banana.</li>
+            <li>
+              In a blender, combine the avocado, banana, spinach, almond milk,
+              honey or maple syrup (if using), and a handful of ice cubes.
+            </li>
+            <li>Blend until smooth and creamy.</li>
+            <li>Pour into glasses and serve immediately.</li>
+          </ol>
+        </div>
+
+        <div class="recipe">
+          <div class="image">
+            <img
+              src="/images/Sectiunea 1, pagina princip/guacamole.jpg"
+              alt="Guacamole"
+            />
+          </div>
+          <h3>Guacamole</h3>
+          <p>Ingredients:</p>
+          <ul>
+            <li>2 ripe avocados</li>
+            <li>1 small onion, finely chopped</li>
+            <li>1 ripe tomato, diced</li>
+            <li>1 jalapeño pepper, seeded and minced</li>
+            <li>2 tablespoons fresh cilantro, chopped</li>
+            <li>1 tablespoon lime juice</li>
+            <li>Salt and pepper to taste</li>
+          </ul>
+          <p>Instructions:</p>
+          <ol>
+            <li>
+              Halve the avocados, remove the pit, and scoop out the flesh into a
+              bowl.
+            </li>
+            <li>Mash the avocados with a fork until desired consistency.</li>
+            <li>
+              Add the chopped onion, diced tomato, minced jalapeño pepper,
+              cilantro, lime juice, salt, and pepper. Mix well.
+            </li>
+            <li>Adjust seasoning to taste.</li>
+            <li>
+              Serve with tortilla chips or as a topping for tacos, burritos, or
+              sandwiches.
+            </li>
+          </ol>
+        </div>
+
+        <div class="recipe">
+          <div class="image">
+            <img
+              src="/images/Sectiunea 1, pagina princip/avocado-salad.jpg"
+              alt="Avocado Salad"
+            />
+          </div>
+          <h3>Avocado Salad</h3>
+          <p>Ingredients:</p>
+          <ul>
+            <li>2 ripe avocados, diced</li>
+            <li>1 cup cherry tomatoes, halved</li>
+            <li>1 cucumber, diced</li>
+            <li>1/2 red onion, thinly sliced</li>
+            <li>2 tablespoons fresh lemon juice</li>
+            <li>2 tablespoons olive oil</li>
+            <li>Salt and pepper to taste</li>
+            <li>Optional toppings: feta cheese, nuts, or seeds</li>
+          </ul>
+          <p>Instructions:</p>
+          <ol>
+            <li>
+              In a large bowl, combine the diced avocados, cherry tomatoes,
+              cucumber, and red onion.
+            </li>
+            <li>
+              In a small bowl, whisk together the lemon juice, olive oil, salt,
+              and pepper.
+            </li>
+            <li>
+              Pour the dressing over the avocado mixture and toss gently to
+              combine.
+            </li>
+            <li>Top with optional toppings, if desired.</li>
+            <li>
+              Refrigerate for about 30 minutes to allow the flavors to meld.
+            </li>
+            <li>Serve chilled.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <footer id="site-footer">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-sm">
+            <p class="footer-copyright">
+              Tot conținutul este generat de către Savori în bucătărie. Toate
+              drepturile rezervate.
+            </p>
+            <p class="footer-copyright">Creat de Cristina Aftode © 2023.</p>
+          </div>
+          <div class="footer-icons">
+            <div class="icon-instagram">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+                width="30"
+              >
+                <path
+                  d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                />
+              </svg>
+            </div>
+            <div class="icon-tiktok">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+                width="20"
+                class="icon-tiktok"
+              >
+                <path
+                  d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+      integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+      integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

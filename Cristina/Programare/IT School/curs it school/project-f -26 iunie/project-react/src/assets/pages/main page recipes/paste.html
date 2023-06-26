@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="/styles/shared.css" />
+  <link rel="stylesheet" href="/styles/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel&family=Comfortaa&family=Karla&family=Labrada&family=Libre+Baskerville:wght@400;700&family=Lora:ital,wght@0,700;1,400&family=Montserrat&family=Oswald:wght@400;700&family=Parisienne&display=swap"
+    rel="stylesheet"
+  />
+  <title>Pasta Recipes</title>
+  <head>
+    <style>
+      body {
+        background-color: #f2f2f2;
+        color: rgb(35, 34, 34);
+      }
+
+      h1 {
+        font-size: 28px;
+        text-align: center;
+        font-family: "Libre Baskerville", serif;
+        padding: 50px 0 0px 0;
+        color: rgb(86, 64, 64);
+        text-transform: uppercase;
+      }
+
+      .recipe-list {
+        max-width: 800px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-gap: 20px;
+        padding: 20px;
+      }
+
+      .recipe-card {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .recipe-card h2 {
+        margin-top: 0;
+        font-family: "Libre Baskerville", serif;
+        font-size: 18px;
+        text-transform: uppercase;
+        text-decoration: solid;
+      }
+
+      .recipe-card p {
+        margin-bottom: 10px;
+        line-height: 1.5;
+        font-family: "Karla", sans-serif;
+        font-size: 13px;
+      }
+
+      .recipe-card img {
+        max-width: 50%;
+        height: auto;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        align-items: center;
+      }
+
+      @media (max-width: 600px) {
+        .recipe-list {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <header>
+    <div class="container-principal">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid p-0">
+          <a class="navbar-brand" href="/project-react/assets/index.html">
+            <img src="/logo.jpg" alt="Logo" width="120px" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link m-lg-4 p-0"
+                  href="/pages//main page/breakfast.html"
+                  >Breakfast</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link m-lg-4 p-0"
+                  href="/pages//main page/appetizers.html"
+                  >Appetizers</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link m-lg-4 p-0"
+                  href="/pages//main page/dinner.html"
+                  >Dinner</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link m-lg-4 p-0"
+                  href="/pages//main page/dessert.html"
+                  >Desert</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle m-lg-4 p-0"
+                  href="/project-react/assets/pages/main page/magicbox.html"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Magic box
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="/pages/main page/sauces.html"
+                      >Sauces</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/pages//main page/soups.html"
+                      >Soups</a
+                    >
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="/pages//main page/plan-de-mese.html"
+                      >Meal plan</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <div class="style-form">
+              <form class="d-flex" role="search">
+                <input
+                  class="form-control me-3"
+                  type="search"
+                  placeholder="Something delicious..."
+                  aria-label="Search"
+                />
+                <button class="btn btn-outline-dark me-5" type="submit">
+                  Search
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <body>
+    <h1>Pasta Recipes</h1>
+    <div class="recipe-list">
+      <div class="recipe-card">
+        <h2>Spaghetti Bolognese</h2>
+        <p>
+          Spaghetti Bolognese is a classic Italian pasta dish. It features al
+          dente spaghetti noodles tossed in a rich and flavorful Bolognese sauce
+          made with ground beef, tomatoes, onions, garlic, and herbs. This
+          hearty and satisfying dish is perfect for family dinners and
+          gatherings.
+        </p>
+        <p>
+          To make Spaghetti Bolognese, cook the spaghetti according to package
+          instructions. In a separate pan, brown the ground beef with onions and
+          garlic. Add crushed tomatoes, tomato paste, herbs, and let the sauce
+          simmer for about 30 minutes. Serve the Bolognese sauce over the cooked
+          spaghetti and garnish with grated Parmesan cheese.
+        </p>
+        <img src="spaghetti_bolognese.jpg" alt="Spaghetti Bolognese" />
+      </div>
+
+      <div class="recipe-card">
+        <h2>Fettuccine Alfredo</h2>
+        <p>
+          Fettuccine Alfredo is a creamy and indulgent pasta dish originating
+          from Italy. It consists of long, flat fettuccine noodles coated in a
+          velvety sauce made with butter, cream, and Parmesan cheese. This
+          luxurious dish is simple yet incredibly satisfying.
+        </p>
+        <p>
+          To prepare Fettuccine Alfredo, cook the fettuccine noodles until al
+          dente. In a separate saucepan, melt butter and add cream, stirring
+          until it thickens slightly. Stir in grated Parmesan cheese, salt, and
+          pepper. Toss the cooked fettuccine in the sauce until well coated.
+          Serve hot with a sprinkle of fresh parsley.
+        </p>
+        <img src="fettuccine_alfredo.jpg" alt="Fettuccine Alfredo" />
+      </div>
+
+      <div class="recipe-card">
+        <h2>Penne alla Vodka</h2>
+        <p>
+          Penne alla Vodka is a delightful pasta dish that combines penne pasta
+          with a creamy tomato sauce infused with vodka. The sauce is made with
+          tomatoes, heavy cream, onions, garlic, and a touch of vodka, resulting
+          in a smooth and slightly tangy flavor.
+        </p>
+        <p>
+          To make Penne alla Vodka, cook the penne pasta until al dente. In a
+          saucepan, sauté onions and garlic, then add crushed tomatoes, vodka,
+          and seasonings. Simmer the sauce for about 10 minutes before adding
+          heavy cream. Cook for an additional 5 minutes, then combine the sauce
+          with cooked penne. Serve with a sprinkle of fresh basil.
+        </p>
+        <img src="penne_alla_vodka.jpg" alt="Penne alla Vodka" />
+      </div>
+
+      <div class="recipe-card">
+        <h2>Carbonara</h2>
+        <p>
+          Carbonara is a classic Roman pasta dish known for its creamy and
+          flavorful sauce. It typically consists of spaghetti or rigatoni
+          noodles tossed in a sauce made with eggs, cheese (usually Pecorino
+          Romano or Parmesan), pancetta or bacon, and black pepper.
+        </p>
+        <p>
+          To prepare Carbonara, cook the pasta until al dente. Meanwhile, sauté
+          pancetta or bacon until crispy. In a bowl, whisk together eggs, grated
+          cheese, black pepper, and a little pasta water. Drain the cooked pasta
+          and add it to the pan with the pancetta. Turn off the heat and pour in
+          the egg mixture, tossing the pasta until coated. Serve immediately,
+          garnished with additional cheese and pepper.
+        </p>
+        <img src="carbonara.jpg" alt="Carbonara" />
+      </div>
+
+      <div class="recipe-card">
+        <h2>Lasagna</h2>
+        <p>
+          Lasagna is a popular Italian baked pasta dish made with layers of wide
+          pasta sheets, meat sauce, cheese, and béchamel sauce. It is a hearty
+          and comforting dish that is perfect for feeding a crowd or for
+          leftovers.
+        </p>
+        <p>
+          To make Lasagna, cook the lasagna noodles until al dente. In a
+          separate pan, brown ground beef with onions and garlic. Add crushed
+          tomatoes, herbs, and simmer the meat sauce. In a baking dish, layer
+          the noodles, meat sauce, grated cheese, and béchamel sauce. Repeat the
+          layers and bake in the oven until the cheese is melted and bubbly. Let
+          it rest before serving.
+        </p>
+        <img src="lasagna.jpg" alt="Lasagna" />
+      </div>
+
+      <div class="recipe-card">
+        <h2>Aglio e Olio</h2>
+        <p>
+          Aglio e Olio, meaning "garlic and oil" in Italian, is a simple and
+          flavorful pasta dish. It consists of spaghetti tossed in olive oil,
+          garlic, red pepper flakes, and parsley. Despite its simplicity, it
+          packs a punch of flavor.
+        </p>
+        <p>
+          To prepare Aglio e Olio, cook the spaghetti until al dente. In a
+          skillet, heat olive oil and sauté minced garlic and red pepper flakes
+          until fragrant. Toss the cooked spaghetti in the garlic-infused oil.
+          Finish with chopped parsley, a sprinkle of grated Parmesan cheese, and
+          additional red pepper flakes if desired.
+        </p>
+        <img src="aglio_e_olio.jpg" alt="Aglio e Olio" />
+      </div>
+
+      <div class="recipe-card">
+        <h2>Pasta Primavera</h2>
+        <p>
+          Pasta Primavera is a vibrant and fresh pasta dish loaded with seasonal
+          vegetables. It typically includes colorful vegetables like bell
+          peppers, carrots, zucchini, broccoli, and cherry tomatoes, sautéed in
+          olive oil and tossed with pasta.
+        </p>
+        <p>
+          To make Pasta Primavera, cook the pasta until al dente. In a skillet,
+          sauté the vegetables in olive oil until tender-crisp. Season with
+          salt, pepper, and herbs of your choice. Toss the cooked pasta with the
+          sautéed vegetables and drizzle with a little olive oil. Serve with
+          grated Parmesan cheese.
+        </p>
+        <img src="pasta_primavera.jpg" alt="Pasta Primavera" />
+      </div>
+
+      <div class="recipe-card">
+        <h2>Pasta with Pesto</h2>
+        <p>
+          Pasta with Pesto is a classic Italian dish that combines pasta with a
+          vibrant and flavorful sauce made from fresh basil leaves, garlic, pine
+          nuts, Parmesan cheese, and olive oil. It is a quick and delicious
+          option for a satisfying meal.
+        </p>
+        <p>
+          To prepare Pasta with Pesto, cook the pasta until al dente. In a food
+          processor, blend fresh basil leaves, garlic, pine nuts, and grated
+          Parmesan cheese until smooth. Slowly add olive oil while blending
+          until a thick sauce forms. Toss the cooked pasta with the pesto sauce
+          until well coated. Serve with additional Parmesan cheese and a
+          sprinkle of pine nuts.
+        </p>
+        <img src="pasta_with_pesto.jpg" alt="Pasta with Pesto" />
+      </div>
+      <div class="recipe-card">
+        <h2>Penne al Forno Siciliane</h2>
+        <p>
+          Penne al Forno Siciliane is a delicious Sicilian baked pasta dish. It
+          features penne pasta tossed in a rich tomato sauce with eggplant,
+          mozzarella cheese, and Parmesan cheese. The dish is then baked until
+          the cheese is golden and bubbly.
+        </p>
+        <p>
+          To make Penne al Forno Siciliane, cook the penne pasta until al dente.
+          In a separate pan, sauté diced eggplant until golden. Add crushed
+          tomatoes, garlic, basil, salt, and pepper to make the sauce. Combine
+          the cooked penne with the sauce and transfer it to a baking dish. Top
+          with slices of mozzarella cheese and grated Parmesan cheese. Bake in
+          the oven at 375°F (190°C) for about 20 minutes until golden and
+          bubbly.
+        </p>
+        <img
+          src="penne_al_forno_siciliane.jpg"
+          alt="Penne al Forno Siciliane"
+        />
+      </div>
+      <div class="recipe-card">
+        <h2>Pasta Napoletana</h2>
+        <p>
+          Pasta Napoletana is a traditional Neapolitan pasta dish that showcases
+          the flavors of the region. It is a simple yet incredibly flavorful
+          dish made with spaghetti tossed in a fresh tomato sauce infused with
+          garlic, olive oil, and basil.
+        </p>
+        <p>
+          To prepare Pasta Napoletana, cook the spaghetti until al dente. In a
+          saucepan, heat olive oil and sauté minced garlic until fragrant. Add
+          diced tomatoes, salt, pepper, and torn basil leaves. Let the sauce
+          simmer for about 15-20 minutes until the flavors meld together. Toss
+          the cooked spaghetti in the tomato sauce until well coated. Serve with
+          a garnish of fresh basil leaves.
+        </p>
+        <img src="pasta_napoletana.jpg" alt="Pasta Napoletana" />
+      </div>
+
+      <div class="recipe-card">
+        <h2>Spaghetti Milanese</h2>
+        <p>
+          Spaghetti Milanese is a classic Italian pasta dish hailing from the
+          city of Milan. It features spaghetti noodles tossed in a rich and
+          creamy saffron-infused sauce, topped with a breaded and fried veal
+          cutlet known as "cotoletta".
+        </p>
+        <p>
+          To make Spaghetti Milanese, cook the spaghetti until al dente.
+          Meanwhile, prepare the saffron sauce by heating cream, saffron
+          threads, salt, and pepper in a saucepan. Let the sauce simmer until it
+          thickens slightly. For the cotoletta, bread and fry a veal cutlet
+          until golden and crispy. Drain the spaghetti, toss it in the saffron
+          sauce, and serve it topped with the cotoletta.
+        </p>
+        <img src="spaghetti_milanese.jpg" alt="Spaghetti Milanese" />
+      </div>
+
+      <div class="recipe-card">
+        <h2>Pasta with Salmon and Zucchini</h2>
+        <p>
+          Pasta with Salmon and Zucchini is a delightful combination of flavors.
+          It features pasta tossed in a creamy sauce made with smoked salmon,
+          sautéed zucchini, garlic, cream, and Parmesan cheese. The dish is
+          finished with a sprinkle of fresh dill.
+        </p>
+        <p>
+          To prepare Pasta with Salmon and Zucchini, cook the pasta until al
+          dente. In a skillet, sauté sliced zucchini and minced garlic until
+          tender. Add diced smoked salmon and cook for a few more minutes. Pour
+          in the cream, season with salt and pepper, and let the sauce simmer
+          until slightly thickened. Toss the cooked pasta in the sauce and stir
+          in grated Parmesan cheese. Serve hot, garnished with fresh dill.
+        </p>
+        <img
+          src="pasta_salmon_zucchini.jpg"
+          alt="Pasta with Salmon and Zucchini"
+        />
+      </div>
+    </div>
+    <footer id="site-footer">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-sm">
+            <p class="footer-copyright">
+              Tot conținutul este generat de către Savori în bucătărie. Toate
+              drepturile rezervate.
+            </p>
+            <p class="footer-copyright">Creat de Cristina Aftode © 2023.</p>
+          </div>
+          <div class="footer-icons">
+            <div class="icon-instagram">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+                width="30"
+              >
+                <path
+                  d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                />
+              </svg>
+            </div>
+            <div class="icon-tiktok">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+                width="20"
+                class="icon-tiktok"
+              >
+                <path
+                  d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+      integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+      integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sarmale Recipe</title>
+    <style>
+      /* CSS styles for the recipe page */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      p {
+        line-height: 1.5;
+      }
+
+      .ingredients-list {
+        margin-bottom: 20px;
+      }
+
+      .ingredients-list ul {
+        padding: 0;
+        list-style-type: none;
+      }
+
+      .ingredients-list li {
+        margin-bottom: 5px;
+      }
+
+      .instructions {
+        margin-bottom: 20px;
+      }
+
+      .instructions ol {
+        counter-reset: step;
+        padding-left: 20px;
+      }
+
+      .instructions li {
+        counter-increment: step;
+        margin-bottom: 10px;
+      }
+
+      .instructions li:before {
+        content: counter(step) ".";
+        font-weight: bold;
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Sarmale Recipe</h1>
+
+      <h2>Ingredients:</h2>
+      <div class="ingredients-list">
+        <ul>
+          <li>1 large cabbage head</li>
+          <li>500g ground pork</li>
+          <li>200g rice</li>
+          <li>1 onion, finely chopped</li>
+          <li>2 cloves garlic, minced</li>
+          <li>1 tablespoon tomato paste</li>
+          <li>1 teaspoon dried thyme</li>
+          <li>1 teaspoon paprika</li>
+          <li>1/2 teaspoon black pepper</li>
+          <li>Salt to taste</li>
+          <li>500ml vegetable broth</li>
+          <li>2 tablespoons vegetable oil</li>
+        </ul>
+      </div>
+
+      <h2>Instructions:</h2>
+      <div class="instructions">
+        <ol>
+          <li>
+            Boil the cabbage head in a large pot of water for about 10 minutes.
+            Remove from water, let it cool, and separate the leaves.
+          </li>
+          <li>
+            In a bowl, mix the ground pork, rice, onion, garlic, tomato paste,
+            thyme, paprika, black pepper, and salt.
+          </li>
+          <li>
+            Take a cabbage leaf and place a small amount of the pork mixture in
+            the center. Roll the leaf, tucking in the sides, and place it in a
+            large pot.
+          </li>
+          <li>
+            Repeat the previous step until all the cabbage leaves and pork
+            mixture are used.
+          </li>
+          <li>Pour the vegetable broth over the sarmale in the pot.</li>
+          <li>Cover the pot and cook on low heat for about 2 hours.</li>
+          <li>Serve hot and enjoy!</li>
+        </ol>
+      </div>
+    </div>
+  </body>
+</html>
