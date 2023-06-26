@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="/styles/shared.css" />
+  <link rel="stylesheet" href="/styles/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel&family=Comfortaa&family=Karla&family=Labrada&family=Libre+Baskerville:wght@400;700&family=Lora:ital,wght@0,700;1,400&family=Montserrat&family=Oswald:wght@400;700&family=Parisienne&display=swap"
+    rel="stylesheet"
+  />
+  <title>Seasoning Recipes</title>
+  <head>
+    <style>
+      body {
+        background-color: #f2f2f2;
+        color: rgb(35, 34, 34);
+      }
+
+      header {
+        background-color: white;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+      }
+
+      h1 {
+        color: #333;
+        font-family: "Libre Baskerville", serif;
+        padding: 20px;
+        text-align: center;
+        font-size: 30px;
+      }
+
+      h2 {
+        color: #333;
+        font-family: "Libre Baskerville", serif;
+        padding: 20px;
+        font-size: 25px;
+      }
+
+      h3 {
+        color: #333;
+        font-family: "Libre Baskerville", serif;
+        padding: 20px;
+        font-size: 20px;
+      }
+
+      p {
+        color: #666;
+        font-family: "Karla", sans-serif;
+      }
+
+      .container li {
+        font-family: "Karla", sans-serif;
+      }
+
+      .recipe-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+
+      .recipe-card {
+        border: 1px solid #ccc;
+        padding: 20px;
+        font-family: "Karla", sans-serif;
+        background-color: #fff;
+      }
+
+      .recipe-card img {
+        max-width: 100%;
+      }
+
+      .recipe-card h3 {
+        margin-top: 10px;
+        font-size: 18px;
+      }
+
+      .recipe-card p {
+        margin-top: 10px;
+        font-family: "Karla", sans-serif;
+      }
+      #site-footer {
+        background-color: #f2f2f2;
+      }
+    </style>
+  </head>
+  <header>
+    <div class="container-principal">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid p-0">
+          <a class="navbar-brand" href="/project-react/assets/index.html">
+            <img src="/logo.jpg" alt="Logo" width="120px" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link m-lg-4 p-0"
+                  href="/pages//main page/breakfast.html"
+                  >Breakfast</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link m-lg-4 p-0"
+                  href="/pages//main page/appetizers.html"
+                  >Appetizers</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link m-lg-4 p-0"
+                  href="/pages//main page/dinner.html"
+                  >Dinner</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link m-lg-4 p-0"
+                  href="/pages//main page/dessert.html"
+                  >Dessert</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle m-lg-4 p-0"
+                  href="/project-react/assets/pages/main page/magicbox.html"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Magic box
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="/pages/main page/sauces.html"
+                      >Sauces</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/pages//main page/soups.html"
+                      >Soups</a
+                    >
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="/pages//main page/plan-de-mese.html"
+                      >Meal plan</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <div class="style-form">
+              <form class="d-flex" role="search">
+                <input
+                  class="form-control me-3"
+                  type="search"
+                  placeholder="Something delicious..."
+                  aria-label="Search"
+                />
+                <button class="btn btn-outline-dark me-5" type="submit">
+                  Search
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <body>
+    <div class="container">
+      <h1>Importance of Seasoning</h1>
+      <p>
+        Seasoning plays a vital role in enhancing the taste of food. It adds
+        depth, complexity, and balance to the flavors, making the dish more
+        enjoyable. A well-seasoned dish can elevate even the simplest
+        ingredients and turn them into a culinary delight. It brings out the
+        natural flavors of the ingredients and can transform a bland dish into a
+        mouthwatering masterpiece.
+      </p>
+
+      <h2>Methods of Seasoning</h2>
+      <ul>
+        <li>
+          <strong>Salt and Pepper:</strong> The basic and most common method of
+          seasoning, salt and pepper can enhance the taste of almost any dish.
+          Salt brings out the natural flavors of the ingredients and helps
+          balance the overall taste. Pepper adds a subtle spiciness and depth.
+        </li>
+        <li>
+          <strong>Herbs and Spices:</strong> Adding herbs and spices like
+          oregano, basil, cumin, paprika, and cinnamon can bring unique flavors
+          and aromas to your dishes. Oregano and basil add a fresh, earthy
+          taste, while cumin and paprika offer warm and smoky notes. Cinnamon
+          adds a sweet and warm flavor, often used in desserts.
+        </li>
+        <li>
+          <strong>Citrus Zest:</strong> Grating the zest of citrus fruits like
+          lemons, oranges, or limes can add a burst of freshness and tanginess
+          to your food. It brings a bright and vibrant taste, complementing both
+          sweet and savory dishes.
+        </li>
+        <li>
+          <strong>Sauces and Condiments:</strong> Using sauces and condiments
+          like soy sauce, Worcestershire sauce, hot sauce, or mustard can add a
+          punch of flavor. Soy sauce provides a savory and umami taste,
+          Worcestershire sauce adds a tangy and slightly sweet flavor, hot sauce
+          brings heat, and mustard delivers a sharp and tangy kick.
+        </li>
+        <li>
+          <strong>Marinades:</strong> Marinating meats, poultry, or vegetables
+          in flavorful mixtures can infuse them with delicious tastes. Marinades
+          often contain ingredients like garlic, herbs, citrus juice, soy sauce,
+          and olive oil. They help tenderize the food while imparting rich
+          flavors.
+        </li>
+      </ul>
+
+      <h2>Seasoning Recipes</h2>
+      <div class="recipe-list">
+        <div class="recipe-card">
+          <h3>How to Season Chicken</h3>
+          <p>
+            Seasoning chicken can be done by rubbing a mixture of salt, pepper,
+            garlic powder, and paprika all over the chicken. For added flavor,
+            you can also use herbs like thyme or rosemary. Let the chicken
+            marinate in the seasoning for at least 30 minutes before cooking.
+          </p>
+        </div>
+        <div class="recipe-card">
+          <h3>How to Season Pork</h3>
+          <p>
+            Pork can be seasoned with a combination of salt, pepper, garlic
+            powder, and dried herbs like sage or thyme. You can also use a
+            marinade with soy sauce, brown sugar, and Worcestershire sauce for a
+            savory and slightly sweet flavor. Allow the pork to marinate in the
+            seasoning for a few hours or overnight.
+          </p>
+        </div>
+        <div class="recipe-card">
+          <h3>How to Season Beef</h3>
+          <p>
+            Seasoning beef can be as simple as using salt and pepper or more
+            complex by adding spices like cumin, paprika, or chili powder. For a
+            tender and flavorful result, marinate the beef with a mixture of soy
+            sauce, garlic, and Worcestershire sauce. Let it sit for at least an
+            hour before cooking.
+          </p>
+        </div>
+        <div class="recipe-card">
+          <h3>How to Season Turkey</h3>
+          <p>
+            To season a turkey, you can create a dry rub with a blend of salt,
+            pepper, dried herbs like thyme, sage, and rosemary, along with
+            garlic and onion powder. Rub the mixture all over the turkey,
+            including under the skin for maximum flavor. Let it sit in the
+            seasoning overnight in the refrigerator before cooking.
+          </p>
+        </div>
+        <div class="recipe-card">
+          <h3>How to Season Duck</h3>
+          <p>
+            For duck, a common seasoning method is to use a mixture of salt,
+            pepper, and Chinese five-spice powder. Five-spice powder typically
+            includes star anise, cloves, cinnamon, Szechuan peppercorns, and
+            fennel seeds. Rub the seasoning all over the duck and let it sit for
+            a few hours before roasting.
+          </p>
+        </div>
+        <div class="recipe-card">
+          <h3>How to Season Salad</h3>
+          <p>
+            Seasoning a salad involves adding a dressing that combines flavors
+            and enhances the ingredients. You can make a basic vinaigrette by
+            mixing olive oil, vinegar (such as balsamic or red wine vinegar),
+            Dijon mustard, honey, salt, and pepper. Adjust the quantities to
+            suit your taste preferences and drizzle it over the salad.
+          </p>
+        </div>
+        <div class="recipe-card">
+          <img src="recipe7.jpg" alt="Recipe 7" />
+          <h3>How to Season Fish</h3>
+          <p>
+            Fish can be seasoned with a variety of flavors. A simple and classic
+            method is to season it with salt, pepper, and a squeeze of lemon
+            juice. You can also create a spice blend using ingredients like
+            paprika, garlic powder, onion powder, and dried herbs like dill or
+            parsley. Sprinkle the seasoning evenly over the fish before cooking.
+          </p>
+        </div>
+        <div class="recipe-card">
+          <h3>How to Season Lamb</h3>
+          <p>
+            Lamb can be seasoned with a combination of salt, pepper, garlic, and
+            herbs like rosemary or mint. Create a marinade with olive oil, lemon
+            juice, crushed garlic, and herbs, and let the lamb marinate for at
+            least an hour or overnight. The flavors will infuse into the meat,
+            resulting in a delicious dish.
+          </p>
+        </div>
+      </div>
+    </div>
+    <footer id="site-footer">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-sm">
+            <p class="footer-copyright">
+              Tot conținutul este generat de către Savori în bucătărie. Toate
+              drepturile rezervate.
+            </p>
+            <p class="footer-copyright">Creat de Cristina Aftode © 2023.</p>
+          </div>
+          <div class="footer-icons">
+            <div class="icon-instagram">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+                width="30"
+              >
+                <path
+                  d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                />
+              </svg>
+            </div>
+            <div class="icon-tiktok">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+                width="20"
+                class="icon-tiktok"
+              >
+                <path
+                  d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+      integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+      integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

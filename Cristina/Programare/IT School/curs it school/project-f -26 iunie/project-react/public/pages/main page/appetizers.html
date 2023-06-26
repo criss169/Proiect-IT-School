@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="/styles/shared.css" />
+  <link rel="stylesheet" href="/styles/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel&family=Comfortaa&family=Karla&family=Labrada&family=Libre+Baskerville:wght@400;700&family=Lora:ital,wght@0,700;1,400&family=Montserrat&family=Oswald:wght@400;700&family=Parisienne&display=swap"
+    rel="stylesheet"
+  />
+  <title>Appetizers Recipes</title>
+  <head>
+    <style>
+      #info-appetizers {
+        position: relative;
+        text-align: center;
+        padding: 0 7rem 3rem 7rem;
+      }
+
+      #info-appetizers img {
+        display: block;
+        max-width: 70%;
+        height: 30%;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .image-caption {
+        position: absolute;
+        top: 33%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #333;
+        color: #fff;
+        font-size: 30px;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-family: "Libre Baskerville", serif;
+        background-color: rgba(0, 0, 0, 0.61);
+        backdrop-filter: blur(2px);
+      }
+      .hidden {
+        display: none;
+      }
+
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        margin: 20px;
+      }
+
+      .recipe-card {
+        border: 1px solid #e6e6e6;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        width: calc(33.33% - 10px); /* Display two cards in a row */
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .recipe-card img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        margin-bottom: 10px;
+      }
+      .recipe-card button,
+      #showMoreButton {
+        background-color: #ff80ab;
+        color: #fff;
+        border: none;
+        padding: 8px 12px;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+        font-family: "Karla", sans-serif;
+      }
+      .appetizers-description,
+      #message {
+        text-align: center;
+        padding: 20px;
+        border: 2px solid #ff80ab;
+        border-radius: 10px;
+        background-color: #fbeaf0;
+        color: #555;
+        font-size: 14px;
+        font-weight: bold;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+        margin: 10px auto;
+        line-height: 1.6;
+        font-family: "Karla", sans-serif;
+      }
+      .recipe-card button:hover,
+      #showMoreButton:hover {
+        background-color: #ff4081;
+        font-family: "Karla", sans-serif;
+      }
+
+      .entry-category {
+        color: #999;
+        margin-bottom: 5px;
+        font-family: "Libre Baskerville", serif;
+        font-size: 12px;
+      }
+
+      .recipe-title {
+        margin-bottom: 20px;
+        font-family: "Libre Baskerville", serif;
+        font-size: 20px;
+        text-align: center;
+      }
+
+      .time-details span {
+        margin-bottom: 10px;
+        display: block;
+        font-size: 14px;
+        color: #666;
+        font-family: "Karla", sans-serif;
+      }
+
+      #salad-appetizer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 90px 0 90px;
+        border: 2px dashed #bba7ad;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      #chipdip-recipes {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 90px 0 90px;
+        border: 2px dashed #bba7ad;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      #quick-recipes {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 90px;
+        border: 2px dashed #ff80ab;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      #chipdip-recipes h1,
+      #quick-recipes h1,
+      #salad-appetizer h1 {
+        text-align: center;
+        padding: 20px;
+        font-size: 30px;
+        font-family: "Libre Baskerville", serif;
+        color: #333;
+      }
+
+      .recipe-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      .recipe-overlay.active {
+        pointer-events: auto;
+        opacity: 1;
+      }
+
+      .recipe-details {
+        background-color: #fff;
+        padding: 20px;
+        max-width: 600px;
+        text-align: center;
+        font-family: "Karla", sans-serif;
+      }
+
+      .close-button {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+      }
+      #review {
+        padding: 50px;
+      }
+
+      .container-review {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      #review h1 {
+        text-align: center;
+        padding: 30px;
+        font-size: 30px;
+      }
+      .form-group {
+        margin-bottom: 20px;
+      }
+      label {
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: #555;
+      }
+
+      .stars {
+        list-style: none;
+        padding: 0;
+      }
+      .stars label {
+        font-size: 25px;
+        cursor: pointer;
+        color: #bbb;
+        transition: color 0.3s ease;
+      }
+      .stars input[type="radio"] {
+        display: none;
+      }
+
+      button[type="submit"] {
+        padding: 10px 20px;
+        background-color: #ff80ab;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      button[type="submit"]:hover {
+        background-color: #ff4081;
+      }
+
+      input[type="text"],
+      textarea {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+        color: #333;
+      }
+
+      .stars label:hover,
+      .stars label:hover ~ label,
+      .stars input[type="radio"]:checked ~ label {
+        color: #ffca08;
+      }
+
+      #site-footer {
+        background-color: #f2f2f2;
+      }
+
+      @media screen and (max-width: 991px) {
+        .container {
+          margin: 10px;
+        }
+        .recipe-card {
+          width: calc(50% - 20px);
+        }
+        .recipe-card button {
+          font-size: 14px;
+        }
+      }
+
+      @media screen and (max-width: 767px) {
+        .container {
+          flex-direction: column;
+        }
+        .recipe-card {
+          width: 100%;
+          margin-bottom: 20px;
+        }
+        .recipe-card button {
+          font-size: 12px;
+        }
+        .recipe-title {
+          font-size: 16px;
+        }
+        .time-details span {
+          font-size: 12px;
+        }
+        .image-caption {
+          font-size: 20px;
+          padding: 5px 10px;
+          top: 20%;
+          left: 50%;
+          transform: translate(-50%, -60%);
+        }
+        .appetizers-description {
+          font-size: 12px;
+        }
+        #chipdip-recipes h1,
+        #quick-recipes h1,
+        #salad-appetizer h1 {
+          padding: 20px;
+          font-size: 16px;
+        }
+        .recipe-card button {
+          font-size: 12px;
+        }
+      }
+      @media screen and (max-width: 479px) {
+        .container {
+          margin: 5px;
+        }
+        .recipe-card {
+          width: 100%; /* Display one card per row */
+        }
+        .appetizers-description {
+          font-size: 14px;
+          padding: 15px;
+        }
+        #chipdip-recipes h1,
+        #quick-recipes h1,
+        #salad-appetizer h1 {
+          padding: 20px;
+          font-size: 16px;
+        }
+      }
+    </style>
+  </head>
+  <header>
+    <div class="container-principal">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid p-0">
+          <a class="navbar-brand" href="/project-react/assets/index.html">
+            <img src="/logo.jpg" alt="Logo" width="120px" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link m-lg-4 p-0"
+                  href="/pages//main page/breakfast.html"
+                  >Breakfast</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link m-lg-4 p-0"
+                  href="/pages//main page/appetizers.html"
+                  >Appetizers</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link m-lg-4 p-0"
+                  href="/pages//main page/dinner.html"
+                  >Dinner</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link m-lg-4 p-0"
+                  href="/pages//main page/dessert.html"
+                  >Dessert</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle m-lg-4 p-0"
+                  href="/project-react/assets/pages/main page/magicbox.html"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Magic box
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="/pages/main page/sauces.html"
+                      >Sauces</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/pages//main page/soups.html"
+                      >Soups</a
+                    >
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="/pages//main page/plan-de-mese.html"
+                      >Meal plan</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <div class="style-form">
+              <form class="d-flex" role="search">
+                <input
+                  class="form-control me-3"
+                  type="search"
+                  placeholder="Something delicious..."
+                  aria-label="Search"
+                />
+                <button class="btn btn-outline-dark me-5" type="submit">
+                  Search
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <body>
+    <section id="info-appetizers">
+      <img
+        src="/images/Navbar/Appetizer/cover2.jpg"
+        alt="Appetizers Recipes"
+        class="main-image"
+      />
+      <p class="image-caption">Appetizers Recipes</p>
+      <p class="appetizers-description">
+        Appetizers are a type of food served before the main course of a meal.
+        They are typically small, bite-sized portions of food that are meant to
+        stimulate the appetite and provide a preview of the upcoming meal.
+      </p>
+      <button id="showMoreButton">Show More</button>
+      <div id="message" class="hidden">
+        <p>
+          Appetizers offer a wide range of culinary possibilities, allowing you
+          to explore different flavors, textures, and cultural influences. They
+          provide an opportunity to showcase creativity and set the tone for a
+          memorable dining experience. Here's some information about appetizers,
+          including food combinations:
+        </p>
+        <p>
+          Cheese and Fruit: Pairing various types of cheese with fruits like
+          grapes, apples, or pears creates a balance of flavors and textures.
+        </p>
+        <p>
+          Meat and Cheese: Combining cured meats like prosciutto, salami, or ham
+          with different types of cheese is a popular choice for charcuterie
+          boards.
+        </p>
+        <p>
+          Dips and Dippers: Dips such as hummus, salsa, or spinach dip can be
+          served with an array of dippers like pita bread, tortilla chips, or
+          vegetable crudités.
+        </p>
+        <p>
+          Seafood and Citrus: Seafood appetizers like shrimp or scallops can be
+          enhanced with a squeeze of lemon or a citrus-based sauce.
+        </p>
+        <p>
+          Savory Pastries: Ingredients like cheese, vegetables, or meats can be
+          wrapped in pastry dough to create delicious appetizers such as
+          turnovers or empanadas.
+        </p>
+      </div>
+    </section>
+    <section id="chipdip-recipes">
+      <h1>Delicious Chip and Dip Recipes</h1>
+      <div class="container">
+        <div class="recipe-card">
+          <img
+            src="/images/Navbar/Appetizer/Creamy Spinach Dip.jpg"
+            alt="Creamy Spinach and Artichoke Dip"
+          />
+          <p class="entry-category">Appetizers</p>
+          <h2 class="recipe-title">Creamy Spinach Dip</h2>
+          <div class="time-details">
+            <span>Prep: 10 min</span>
+            <span>Cook: 25 min</span>
+            <span>Total: 35 min</span>
+          </div>
+          <button onclick="showRecipe('creamy-spinach-dip')">
+            View Recipe
+          </button>
+        </div>
+        <div class="recipe-card">
+          <img
+            src="/images/Navbar/Appetizer/Zesty Avocado Salsa.jpg"
+            alt="Zesty Avocado Salsa"
+          />
+          <p class="entry-category">Appetizers</p>
+          <h2 class="recipe-title">Zesty Avocado Salsa</h2>
+          <div class="time-details">
+            <span>Prep: 15 min</span>
+            <span>Cook: 0 min</span>
+            <span>Total: 15 min</span>
+          </div>
+          <button onclick="showRecipe('zesty-avocado-salsa')">
+            View Recipe
+          </button>
+        </div>
+
+        <div class="recipe-card">
+          <img
+            src="/images/Navbar/Appetizer/Chicken Alfredo Dip.jpg"
+            alt="Chicken Alfredo Dip"
+          />
+          <p class="entry-category">Appetizers</p>
+          <h2 class="recipe-title">Chicken Alfredo Dip</h2>
+          <div class="time-details">
+            <span>Prep: 10 min</span>
+            <span>Cook: 25 min</span>
+            <span>Total: 35 min</span>
+          </div>
+          <button onclick="showRecipe('chicken-alfredo-dip')">
+            View Recipe
+          </button>
+        </div>
+        <div class="recipe-card">
+          <img
+            src="/images/Navbar/Appetizer/Quattro Formaggi Dip.jpg"
+            alt="Quattro Formaggi Dip"
+          />
+          <p class="entry-category">Appetizers</p>
+          <h2 class="recipe-title">Quattro Formaggi Dip</h2>
+          <div class="time-details">
+            <span>Prep: 10 min</span>
+            <span>Cook: 20 min</span>
+            <span>Total: 30 min</span>
+          </div>
+          <button onclick="showRecipe('quattro-formaggi-dip')">
+            View Recipe
+          </button>
+        </div>
+      </div>
+    </section>
+    <section id="quick-recipes">
+      <h1>Quick Appetizers Recipes</h1>
+      <div class="container">
+        <div class="recipe-card">
+          <img
+            src="/images/Navbar/Appetizer/Bruschetta with Tomato and Basil.jpg"
+            alt="Bruschetta with Tomato and Basil"
+          />
+          <p class="entry-category">Appetizers</p>
+          <h2 class="recipe-title">Bruschetta with Tomato and Basil</h2>
+          <div class="time-details">
+            <span>Prep: 15 min</span>
+            <span>Cook: 10 min</span>
+            <span>Total: 25 min</span>
+          </div>
+          <button onclick="showRecipe('bruschetta-with-tomato-and-basil')">
+            View Recipe
+          </button>
+        </div>
+        <div class="recipe-card">
+          <img
+            src="/images/Navbar/Appetizer/Smoked Salmon and Cream Cheese Roll-Ups.jpg"
+            alt="Smoked Salmon and Cream Cheese Roll-Ups"
+          />
+          <p class="entry-category">Appetizers</p>
+          <h2 class="recipe-title">Smoked Salmon and Cream Cheese Roll-Ups</h2>
+          <div class="time-details">
+            <span>Prep: 15 min</span>
+            <span>Cook: 10 min</span>
+            <span>Total: 25 min</span>
+          </div>
+          <button
+            onclick="showRecipe('smoked-salmon-and-cream-cheese-roll-ups')"
+          >
+            View Recipe
+          </button>
+        </div>
+        <div class="recipe-card">
+          <img
+            src="/images/Navbar/Appetizer/Mini Spinach Puffs.jpg"
+            alt="Mini Spinach and Cheese Puffs"
+          />
+          <p class="entry-category">Appetizers</p>
+          <h2 class="recipe-title">Mini Spinach and Blue Cheese Puffs</h2>
+          <div class="time-details">
+            <span>Prep: 15 min</span>
+            <span>Cook: 20 min</span>
+            <span>Total: 35 min</span>
+          </div>
+          <button onclick="showRecipe('mini-spinach-and-blue-cheese-puffs')">
+            View Recipe
+          </button>
+        </div>
+        <div class="recipe-card">
+          <img
+            src="/images/Navbar/Appetizer/Baked Brie with Cranberry Sauce.jpg"
+            alt="Baked Brie with Cranberry Sauce"
+          />
+          <p class="entry-category">Appetizers</p>
+          <h2 class="recipe-title">Baked Brie with Cranberry Sauce</h2>
+          <div class="time-details">
+            <span>Prep: 5 min</span>
+            <span>Cook: 15 min</span>
+            <span>Total: 20 min</span>
+          </div>
+          <button onclick="showRecipe('baked-brie-with-cranberry-sauce')">
+            View Recipe
+          </button>
+        </div>
+      </div>
+    </section>
+    <section id="salad-appetizer">
+      <h1>Appetizer salad</h1>
+      <div class="container">
+        <div class="recipe-card">
+          <img
+            src="/images/Navbar/Appetizer/Raw Vegetable Salad.jpg"
+            alt="Raw Vegetable Salad with Carrot and Celery"
+          />
+          <p class="entry-category">Appetizers</p>
+          <h2 class="recipe-title">Raw Vegetable Salad</h2>
+          <div class="time-details">
+            <span>Prep: 15 min</span>
+            <span>Cook: 0 min</span>
+            <span>Total: 15 min</span>
+          </div>
+          <button onclick="showRecipe('raw-vegetable-salad')">
+            View Recipe
+          </button>
+        </div>
+        <div class="recipe-card">
+          <img
+            src="/images/Navbar/Appetizer/Boeuf Salad.jpg"
+            alt="Boeuf Salad"
+          />
+          <p class="entry-category">Appetizers</p>
+          <h2 class="recipe-title">Boeuf Salad</h2>
+          <div class="time-details">
+            <span>Prep: 20 min</span>
+            <span>Cook: 20 min</span>
+            <span>Total: 40 min</span>
+          </div>
+          <button onclick="showRecipe('boeuf-salad')">View Recipe</button>
+        </div>
+        <div class="recipe-card">
+          <img
+            src="/images/Navbar/Appetizer/Oriental Salad.jpg"
+            alt="Oriental Salad"
+          />
+          <p class="entry-category">Appetizers</p>
+          <h2 class="recipe-title">Oriental Salad</h2>
+          <div class="time-details">
+            <span>Prep: 15 min</span>
+            <span>Cook: 40 min</span>
+            <span>Total: 55 min</span>
+          </div>
+          <button onclick="showRecipe('oriental-salad')">View Recipe</button>
+        </div>
+
+        <div class="recipe-card">
+          <img
+            src="/images/Navbar/Appetizer/Mimosa Salad.jpg"
+            alt="Mimosa Salad"
+          />
+          <p class="entry-category">Appetizers</p>
+          <h2 class="recipe-title">Mimosa Salad</h2>
+          <div class="time-details">
+            <span>Prep: 20 min</span>
+            <span>Cook: 0 min</span>
+            <span>Total: 20 min</span>
+          </div>
+          <button onclick="showRecipe('mimosa-salad')">View Recipe</button>
+        </div>
+      </div>
+    </section>
+    <div class="recipe-overlay" onclick="hideRecipe()" id="recipe-overlay">
+      <div class="recipe-details">
+        <h2 id="recipe-title"></h2>
+        <p id="recipe-description"></p>
+        <h3>Ingredients:</h3>
+        <ul id="recipe-ingredients"></ul>
+        <span class="close-button" onclick="hideRecipe()">&times;</span>
+      </div>
+    </div>
+    <section id="review">
+      <div class="container-review">
+        <h1>Review Section</h1>
+        <form id="reviewForm">
+          <label for="name">Name:</label>
+          <input type="text" id="name" required /><br /><br />
+
+          <label for="comments">Comments:</label><br />
+          <textarea id="comments" required></textarea><br /><br />
+
+          <label for="rating">Rating:</label><br />
+          <div class="stars">
+            <input type="radio" id="star5" name="rating" value="5" required />
+            <label for="star5">&#9733;</label>
+            <input type="radio" id="star4" name="rating" value="4" />
+            <label for="star4">&#9733;</label>
+            <input type="radio" id="star3" name="rating" value="3" />
+            <label for="star3">&#9733;</label>
+            <input type="radio" id="star2" name="rating" value="2" />
+            <label for="star2">&#9733;</label>
+            <input type="radio" id="star1" name="rating" value="1" />
+            <label for="star1">&#9733;</label>
+          </div>
+          <br /><br />
+
+          <button type="submit">Post</button>
+        </form>
+
+        <div id="reviewPosts">
+          <!-- The submitted review posts will be displayed here -->
+        </div>
+      </div>
+    </section>
+    <footer id="site-footer">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-sm">
+            <p class="footer-copyright">
+              Tot conținutul este generat de către Savori în bucătărie. Toate
+              drepturile rezervate.
+            </p>
+            <p class="footer-copyright">Creat de Cristina Aftode © 2023.</p>
+          </div>
+          <div class="footer-icons">
+            <div class="icon-instagram">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+                width="30"
+              >
+                <path
+                  d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                />
+              </svg>
+            </div>
+            <div class="icon-tiktok">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+                width="20"
+                class="icon-tiktok"
+              >
+                <path
+                  d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+      integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+      integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./appetizers.js"></script>
+  </body>
+</html>

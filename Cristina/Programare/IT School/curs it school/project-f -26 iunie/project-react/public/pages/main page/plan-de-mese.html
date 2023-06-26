@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/styles/shared.css" />
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel&family=Comfortaa&family=Karla&family=Labrada&family=Libre+Baskerville:wght@400;700&family=Lora:ital,wght@0,700;1,400&family=Montserrat&family=Oswald:wght@400;700&family=Parisienne&display=swap"
+      rel="stylesheet"
+    />
+    <title>Meal Plan</title>
+    <style>
+      h1 {
+        margin-bottom: 20px;
+        font-family: "Libre Baskerville", serif;
+        text-align: center;
+        padding: 30px;
+        font-size: 30px;
+        color: #333;
+      }
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+      }
+      .meal-plan h2 {
+        font-family: "Libre Baskerville", serif;
+        font-size: 24px;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      .meal-plan {
+        border: 1px solid #e6e6e6;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        width: calc(33.33% - 10px); /* Display two cards in a row */
+        padding: 70px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .meal-plan:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .meal-plan p {
+        font-size: 16px;
+        margin-bottom: 30px;
+        text-align: center;
+      }
+
+      .meal-plan-btn {
+        padding: 10px 20px;
+        border: none;
+        background-color: #555;
+        color: #fff;
+        font-size: 16px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+      }
+
+      .meal-plan-btn:hover {
+        background-color: #333;
+      }
+      .container img {
+        object-fit: cover;
+        width: 100%;
+      }
+
+      #FAQ {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px;
+      }
+      .faq-question {
+        font-weight: bold;
+        margin-top: 20px;
+        cursor: pointer;
+        color: #333;
+        font-size: 25px;
+        border-bottom: 1px solid #ddd;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        font-family: "Libre Baskerville", serif;
+      }
+
+      .faq-answer {
+        display: none;
+        margin-bottom: 20px;
+        color: #666;
+        font-size: 15px;
+        line-height: 1.4;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+        font-family: "Karla", sans-serif;
+      }
+
+      .faq-icon {
+        display: inline-block;
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        margin-left: 8px;
+        transition: transform 0.3s;
+      }
+
+      .faq-question.open .faq-icon {
+        transform: rotate(180deg);
+      }
+      .meal-plan-btn {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 2px 5px;
+        background-color: #ff80ab;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+        font-family: "Karla", sans-serif;
+      }
+      .meal-plan-btn:hover {
+        background-color: #ff4081;
+      }
+      #site-footer {
+        background-color: #f2f2f2;
+      }
+
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 25px;
+        }
+
+        .container {
+          flex-direction: column;
+        }
+        .meal-plan h2 {
+          font-size: 20px;
+        }
+
+        .meal-plan {
+          width: 100%;
+          margin-bottom: 20px;
+        }
+        .faq-question {
+          font-size: 18px;
+        }
+      }
+    </style>
+  </head>
+  <header>
+    <div class="container-principal">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid p-0">
+          <a class="navbar-brand" href="/project-react/assets/index.html">
+            <img src="/logo.jpg" alt="Logo" width="120px" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link m-lg-4 p-0"
+                  href="/pages//main page/breakfast.html"
+                  >Breakfast</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link m-lg-4 p-0"
+                  href="/pages//main page/appetizers.html"
+                  >Appetizers</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link m-lg-4 p-0"
+                  href="/pages//main page/dinner.html"
+                  >Dinner</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link m-lg-4 p-0"
+                  href="/pages//main page/dessert.html"
+                  >Desert</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle m-lg-4 p-0"
+                  href="/project-react/assets/pages/main page/magicbox.html"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Magic box
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="/pages/main page/sauces.html"
+                      >Sauces</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/pages//main page/soups.html"
+                      >Soups</a
+                    >
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="/pages//main page/plan-de-mese.html"
+                      >Meal plan</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <div class="style-form">
+              <form class="d-flex" role="search">
+                <input
+                  class="form-control me-3"
+                  type="search"
+                  placeholder="Something delicious..."
+                  aria-label="Search"
+                />
+                <button class="btn btn-outline-dark me-5" type="submit">
+                  Search
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <body>
+    <h1>Meal Plans</h1>
+    <div class="container">
+      <div class="meal-plan">
+        <img src="/images/Navbar/Meal plans/wmp1.jpg" alt="Meal Plan 1" />
+        <a class="meal-plan-btn" href="./mealplan1.html">View Meal Plan 1</a>
+      </div>
+      <div class="meal-plan">
+        <img src="/images/Navbar/Meal plans/wmp2.jpg" alt="Meal Plan 2" />
+
+        <a class="meal-plan-btn" href="meal2.html">View Meal Plan 2</a>
+      </div>
+      <div class="meal-plan">
+        <img src="/images/Navbar/Meal plans/wmp3.jpg" alt="Meal Plan 3" />
+        <a class="meal-plan-btn" href="meal3.html">View Meal Plan 3</a>
+      </div>
+      <div class="meal-plan">
+        <img src="/images/Navbar/Meal plans/wmp4.jpg" alt="Meal Plan 4" />
+        <a class="meal-plan-btn" href="meal4.html">View Meal Plan 4</a>
+      </div>
+      <div class="meal-plan">
+        <img src="/images/Navbar/Meal plans/wmp5.jpg" alt="Meal Plan 5" />
+        <a class="meal-plan-btn" href="meal5.html">View Meal Plan 5</a>
+      </div>
+      <div class="meal-plan">
+        <img src="/images/Navbar/Meal plans/wmp6.jpg" alt="Meal Plan 6" />
+        <a class="meal-plan-btn" href="meal6.html">View Meal Plan 6</a>
+      </div>
+    </div>
+    <section id="FAQ">
+      <h5 class="faq-question">Weekly Meal Plan Frequently Asked Questions</h5>
+
+      <div class="faq-question">
+        <h5>What is a weekly meal plan?</h5>
+        <span class="faq-icon"><i class="fas fa-plus"></i></span>
+      </div>
+
+      <div class="faq-answer">
+        <p>
+          A weekly meal plan is a pre-planned schedule of meals for an entire
+          week. It involves deciding what to cook or eat for breakfast, lunch,
+          dinner, and snacks, and organizing them into a structured plan.
+        </p>
+      </div>
+
+      <div class="faq-question">
+        <h5>How can I ensure a balanced and nutritious meal plan?</h5>
+        <span class="faq-icon"><i class="fas fa-plus"></i></span>
+      </div>
+
+      <div class="faq-answer">
+        <p>
+          Include a variety of food groups in your meals, such as lean proteins,
+          whole grains, fruits, vegetables, and healthy fats. Aim for a balance
+          of macronutrients (carbohydrates, proteins, and fats) and consider
+          portion sizes. You can also seek guidance from a registered dietitian
+          or use meal planning tools that provide nutritional information.
+        </p>
+      </div>
+
+      <div class="faq-question">
+        <h5>How can I save time with meal planning?</h5>
+        <span class="faq-icon"><i class="fas fa-plus"></i></span>
+      </div>
+
+      <div class="faq-answer">
+        <p>
+          To save time, consider batch cooking, where you prepare larger
+          quantities of meals and store them for later use. Choose recipes that
+          are quick and easy to make or opt for meal prep techniques like
+          chopping vegetables or marinating meats in advance.
+        </p>
+      </div>
+      <div class="faq-question">
+        <h5>How can I ensure a balanced and nutritious meal plan?</h5>
+        <span class="faq-icon"><i class="fas fa-plus"></i></span>
+      </div>
+
+      <div class="faq-answer">
+        <p>
+          Include a variety of food groups in your meals, such as lean proteins,
+          whole grains, fruits, vegetables, and healthy fats. Aim for a balance
+          of macronutrients (carbohydrates, proteins, and fats) and consider
+          portion sizes. You can also seek guidance from a registered dietitian
+          or use meal planning tools that provide nutritional information.
+        </p>
+      </div>
+      <div class="faq-question">
+        <h5>What if my schedule changes during the week?</h5>
+        <span class="faq-icon"><i class="fas fa-plus"></i></span>
+      </div>
+
+      <div class="faq-answer">
+        <p>
+          Weekly meal plans are not set in stone. If your schedule changes or
+          unexpected events occur, be flexible and adapt your plan accordingly.
+          Keep a few backup recipes or convenience options for busy days or
+          unforeseen circumstances.
+        </p>
+      </div>
+    </section>
+    <footer id="site-footer">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-sm">
+            <p class="footer-copyright">
+              Tot conținutul este generat de către Savori în bucătărie. Toate
+              drepturile rezervate.
+            </p>
+            <p class="footer-copyright">Creat de Cristina Aftode © 2023.</p>
+          </div>
+          <div class="footer-icons">
+            <div class="icon-instagram">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+                width="30"
+              >
+                <path
+                  d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                />
+              </svg>
+            </div>
+            <div class="icon-tiktok">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+                width="20"
+                class="icon-tiktok"
+              >
+                <path
+                  d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+      integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+      integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./plan-de-mese.js"></script>
+  </body>
+</html>

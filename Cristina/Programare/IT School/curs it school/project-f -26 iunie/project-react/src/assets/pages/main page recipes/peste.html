@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/styles/shared.css" />
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel&family=Comfortaa&family=Karla&family=Labrada&family=Libre+Baskerville:wght@400;700&family=Lora:ital,wght@0,700;1,400&family=Montserrat&family=Oswald:wght@400;700&family=Parisienne&display=swap"
+      rel="stylesheet"
+    />
+    <title>Fish Recipes</title>
+    <style>
+      body {
+        background-color: #f2f2f2;
+        color: rgb(35, 34, 34);
+      }
+
+      h1 {
+        font-size: 28px;
+        text-align: center;
+        font-family: "Libre Baskerville", serif;
+        padding: 50px 0 0px 0;
+        color: rgb(86, 64, 64);
+        text-transform: uppercase;
+      }
+
+      .recipe-list {
+        max-width: 800px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-gap: 20px;
+        padding: 20px;
+      }
+
+      .recipe-card {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .recipe-card h2 {
+        margin-top: 0;
+        font-family: "Libre Baskerville", serif;
+        font-size: 18px;
+        text-transform: uppercase;
+        text-decoration: solid;
+      }
+
+      .recipe-card p {
+        margin-bottom: 10px;
+        line-height: 1.5;
+        font-family: "Karla", sans-serif;
+        font-size: 13px;
+      }
+
+      .recipe-card img {
+        max-width: 50%;
+        height: auto;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        align-items: center;
+      }
+
+      @media (max-width: 600px) {
+        .recipe-list {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <header>
+    <div class="container-principal">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid p-0">
+          <a class="navbar-brand" href="/project-react/assets/index.html">
+            <img src="/logo.jpg" alt="Logo" width="120px" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link m-lg-4 p-0"
+                  href="/pages//main page/breakfast.html"
+                  >Breakfast</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link m-lg-4 p-0"
+                  href="/pages//main page/appetizers.html"
+                  >Appetizers</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link m-lg-4 p-0"
+                  href="/pages//main page/dinner.html"
+                  >Dinner</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link m-lg-4 p-0"
+                  href="/pages//main page/dessert.html"
+                  >Desert</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle m-lg-4 p-0"
+                  href="/project-react/assets/pages/main page/magicbox.html"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Magic box
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="/pages/main page/sauces.html"
+                      >Sauces</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/pages//main page/soups.html"
+                      >Soups</a
+                    >
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="/pages//main page/plan-de-mese.html"
+                      >Meal plan</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <div class="style-form">
+              <form class="d-flex" role="search">
+                <input
+                  class="form-control me-3"
+                  type="search"
+                  placeholder="Something delicious..."
+                  aria-label="Search"
+                />
+                <button class="btn btn-outline-dark me-5" type="submit">
+                  Search
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <body>
+    <h1>Fish Recipes</h1>
+    <div class="recipe-list">
+      <div class="recipe-card">
+        <h2>Grilled Salmon</h2>
+        <p>
+          A mouthwatering and healthy grilled salmon recipe that is perfect for
+          any occasion. The salmon is marinated in a flavorful blend of herbs
+          and spices, then grilled to perfection. Serve it with a side of
+          roasted vegetables for a complete meal.
+        </p>
+        <img src="salmon.jpg" alt="Grilled Salmon" />
+      </div>
+      <div class="recipe-card">
+        <h2>Lemon Garlic Shrimp</h2>
+        <p>
+          Indulge in the tantalizing flavors of lemon and garlic with this quick
+          and easy shrimp recipe. The succulent shrimp is sautéed in a buttery
+          lemon garlic sauce, creating a dish that is bursting with freshness
+          and zing. It's a perfect appetizer or main course.
+        </p>
+        <img src="shrimp.jpg" alt="Lemon Garlic Shrimp" />
+      </div>
+      <div class="recipe-card">
+        <h2>Crab Cakes</h2>
+        <p>
+          Experience the taste of the sea with these classic crab cakes. Made
+          with lump crab meat, breadcrumbs, and a blend of herbs and spices,
+          these crab cakes are crispy on the outside and tender on the inside.
+          Serve them with a tangy sauce for a delightful seafood treat.
+        </p>
+        <img src="crab.jpg" alt="Crab Cakes" />
+      </div>
+      <div class="recipe-card">
+        <h2>Baked Cod</h2>
+        <p>
+          Enjoy a light and flaky baked cod fillet that is infused with a
+          delicate lemon butter sauce. This simple yet elegant dish is perfect
+          for a healthy and satisfying dinner. Pair it with steamed vegetables
+          or a side salad for a well-rounded meal.
+        </p>
+        <img src="cod.jpg" alt="Baked Cod" />
+      </div>
+      <div class="recipe-card">
+        <h2>Thai Fish Curry</h2>
+        <p>
+          Transport your taste buds to the vibrant flavors of Thailand with this
+          aromatic fish curry. Made with a rich and fragrant blend of Thai
+          spices, coconut milk, and fresh herbs, this curry is a true delight
+          for seafood lovers. Serve it with steamed rice for a complete meal.
+        </p>
+        <img src="curry.jpg" alt="Thai Fish Curry" />
+      </div>
+      <div class="recipe-card">
+        <h2>Crispy Fish Tacos</h2>
+        <p>
+          Satisfy your craving for Mexican flavors with these crispy fish tacos.
+          The fish fillets are coated in a crispy breadcrumb coating, then fried
+          to perfection. Serve them in warm tortillas with fresh salsa, creamy
+          avocado, and a squeeze of lime for a burst of flavor.
+        </p>
+        <img src="tacos.jpg" alt="Crispy Fish Tacos" />
+      </div>
+      <div class="recipe-card">
+        <h2>Teriyaki Salmon</h2>
+        <p>
+          Experience the delicious combination of sweet and savory with this
+          teriyaki-glazed salmon recipe. The salmon is marinated in a flavorful
+          teriyaki sauce, then baked to perfection. Serve it with a side of
+          steamed vegetables and rice for a satisfying and healthy meal.
+        </p>
+        <img src="teriyaki.jpg" alt="Teriyaki Salmon" />
+      </div>
+      <div class="recipe-card">
+        <h2>Greek-Style Grilled Fish</h2>
+        <p>
+          Transport yourself to the Mediterranean with this flavorful
+          Greek-style grilled fish recipe. The fish is marinated in a mixture of
+          olive oil, lemon juice, garlic, and herbs, then grilled to perfection.
+          Serve it with a side of Greek salad and tzatziki sauce for a complete
+          meal.
+        </p>
+        <img src="greek.jpg" alt="Greek-Style Grilled Fish" />
+      </div>
+    </div>
+    <footer id="site-footer">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-sm">
+            <p class="footer-copyright">
+              Tot conținutul este generat de către Savori în bucătărie. Toate
+              drepturile rezervate.
+            </p>
+            <p class="footer-copyright">Creat de Cristina Aftode © 2023.</p>
+          </div>
+          <div class="footer-icons">
+            <div class="icon-instagram">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+                width="30"
+              >
+                <path
+                  d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                />
+              </svg>
+            </div>
+            <div class="icon-tiktok">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+                width="20"
+                class="icon-tiktok"
+              >
+                <path
+                  d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+      integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+      integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
